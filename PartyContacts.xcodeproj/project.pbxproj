@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
 		4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236171F00AB24003CAA9E /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236291F00AC70003CAA9E /* MessageViewController.m */; };
 		4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */; };
 		4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362F1F00ACA2003CAA9E /* MineViewController.m */; };
+		4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,11 @@
 		4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		4CF2362E1F00ACA2003CAA9E /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		4CF2362F1F00ACA2003CAA9E /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		4CF236391F00B5E2003CAA9E /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyContacts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7977D993A1E9F9741C7CBD /* Pods-PartyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,8 @@
 			children = (
 				4CF2360A1F00AB24003CAA9E /* PartyContacts */,
 				4CF236091F00AB24003CAA9E /* Products */,
+				8EF51CAD7F792FD37FFB2977 /* Pods */,
+				8F75135042C0A86ADE77F0BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,16 +77,8 @@
 		4CF2360A1F00AB24003CAA9E /* PartyContacts */ = {
 			isa = PBXGroup;
 			children = (
-				4CF2360E1F00AB24003CAA9E /* AppDelegate.h */,
-				4CF2360F1F00AB24003CAA9E /* AppDelegate.m */,
-				4CF236251F00AC54003CAA9E /* HomePageViewController.h */,
-				4CF236261F00AC54003CAA9E /* HomePageViewController.m */,
-				4CF236281F00AC70003CAA9E /* MessageViewController.h */,
-				4CF236291F00AC70003CAA9E /* MessageViewController.m */,
-				4CF2362B1F00AC7E003CAA9E /* ContactsViewController.h */,
-				4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */,
-				4CF2362E1F00ACA2003CAA9E /* MineViewController.h */,
-				4CF2362F1F00ACA2003CAA9E /* MineViewController.m */,
+				4CF236371F00B5B6003CAA9E /* ThirdParty */,
+				4CF236351F00B583003CAA9E /* ViewControllers */,
 				4CF2360B1F00AB24003CAA9E /* Supporting Files */,
 			);
 			path = PartyContacts;
@@ -85,6 +87,8 @@
 		4CF2360B1F00AB24003CAA9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4CF2360E1F00AB24003CAA9E /* AppDelegate.h */,
+				4CF2360F1F00AB24003CAA9E /* AppDelegate.m */,
 				4CF2361A1F00AB24003CAA9E /* Assets.xcassets */,
 				4CF2361F1F00AB24003CAA9E /* Info.plist */,
 				4CF2361C1F00AB24003CAA9E /* LaunchScreen.storyboard */,
@@ -94,6 +98,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4CF236351F00B583003CAA9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CF236251F00AC54003CAA9E /* HomePageViewController.h */,
+				4CF236261F00AC54003CAA9E /* HomePageViewController.m */,
+				4CF236281F00AC70003CAA9E /* MessageViewController.h */,
+				4CF236291F00AC70003CAA9E /* MessageViewController.m */,
+				4CF2362B1F00AC7E003CAA9E /* ContactsViewController.h */,
+				4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */,
+				4CF2362E1F00ACA2003CAA9E /* MineViewController.h */,
+				4CF2362F1F00ACA2003CAA9E /* MineViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4CF236371F00B5B6003CAA9E /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				4CF236381F00B5E2003CAA9E /* LTNavigationBar */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		4CF236381F00B5E2003CAA9E /* LTNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				4CF236391F00B5E2003CAA9E /* UINavigationBar+Awesome.h */,
+				4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */,
+			);
+			path = LTNavigationBar;
+			sourceTree = "<group>";
+		};
+		8EF51CAD7F792FD37FFB2977 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */,
+				EC7977D993A1E9F9741C7CBD /* Pods-PartyContacts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F75135042C0A86ADE77F0BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF236221F00AB24003CAA9E /* Build configuration list for PBXNativeTarget "PartyContacts" */;
 			buildPhases = (
+				109C03CD2F6DD11F813351E8 /* [CP] Check Pods Manifest.lock */,
 				4CF236041F00AB24003CAA9E /* Sources */,
 				4CF236051F00AB24003CAA9E /* Frameworks */,
 				4CF236061F00AB24003CAA9E /* Resources */,
+				017CF820892377801AB5B582 /* [CP] Embed Pods Frameworks */,
+				ABB280973978D08E3B640C45 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +217,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		017CF820892377801AB5B582 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		109C03CD2F6DD11F813351E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB280973978D08E3B640C45 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4CF236041F00AB24003CAA9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,6 +273,7 @@
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
+				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
@@ -289,6 +394,7 @@
 		};
 		4CF236231F00AB24003CAA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
@@ -301,6 +407,7 @@
 		};
 		4CF236241F00AB24003CAA9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7977D993A1E9F9741C7CBD /* Pods-PartyContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86UUNEZV42;
