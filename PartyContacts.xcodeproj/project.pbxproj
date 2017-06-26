@@ -16,7 +16,6 @@
 		4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236291F00AC70003CAA9E /* MessageViewController.m */; };
 		4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */; };
 		4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362F1F00ACA2003CAA9E /* MineViewController.m */; };
-		4CF236341F00B253003CAA9E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236331F00B253003CAA9E /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +35,6 @@
 		4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		4CF2362E1F00ACA2003CAA9E /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		4CF2362F1F00ACA2003CAA9E /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		4CF236321F00B253003CAA9E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		4CF236331F00B253003CAA9E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +77,6 @@
 				4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */,
 				4CF2362E1F00ACA2003CAA9E /* MineViewController.h */,
 				4CF2362F1F00ACA2003CAA9E /* MineViewController.m */,
-				4CF236321F00B253003CAA9E /* MainViewController.h */,
-				4CF236331F00B253003CAA9E /* MainViewController.m */,
 				4CF2360B1F00AB24003CAA9E /* Supporting Files */,
 			);
 			path = PartyContacts;
@@ -175,7 +170,6 @@
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
-				4CF236341F00B253003CAA9E /* MainViewController.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);

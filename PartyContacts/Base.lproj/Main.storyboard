@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--党支部通信录-->
         <scene sceneID="zLb-3u-BtC">
             <objects>
                 <navigationController id="qkq-o2-fAF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LW4-A3-KEN"/>
+                    <tabBarItem key="tabBarItem" title="党支部通信录" image="first" id="LW4-A3-KEN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qZW-73-jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -104,11 +104,11 @@
             </objects>
             <point key="canvasLocation" x="-674" y="666"/>
         </scene>
-        <!--Item-->
+        <!--我的-->
         <scene sceneID="gqC-bi-cfd">
             <objects>
                 <navigationController id="j6z-xm-hdZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cv3-8W-24c"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="second" id="cv3-8W-24c"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vsz-Q6-ICI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,11 +121,11 @@
             </objects>
             <point key="canvasLocation" x="-1" y="667"/>
         </scene>
-        <!--Item-->
+        <!--组织-->
         <scene sceneID="ndG-3w-DEW">
             <objects>
                 <navigationController id="40L-fC-gQr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="snL-lr-muf"/>
+                    <tabBarItem key="tabBarItem" title="组织" image="first" id="snL-lr-muf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aug-hX-glE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,11 +157,11 @@
             </objects>
             <point key="canvasLocation" x="1676" y="500"/>
         </scene>
-        <!--Item-->
+        <!--消息-->
         <scene sceneID="lkG-LA-RHf">
             <objects>
                 <navigationController id="qhX-tH-Ng8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LeA-Un-bp8"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="first" id="LeA-Un-bp8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3nq-58-TM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -175,4 +175,8 @@
             <point key="canvasLocation" x="938" y="-155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
