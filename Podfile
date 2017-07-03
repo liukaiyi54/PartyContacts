@@ -9,4 +9,5 @@ target 'PartyContacts' do
 	pod 'SDWebImage'
 	pod 'AFNetworking', '~> 3.1.0'
 	pod 'PureLayout'
+    pod 'MJExtension'
 end

@@ -18,6 +18,7 @@ PODS:
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
   - KLCPopup (1.0)
+  - MJExtension (3.0.13)
   - PureLayout (3.0.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - ChameleonFramework
   - KLCPopup
+  - MJExtension
   - PureLayout
   - SDWebImage
 
@@ -34,9 +36,10 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 4f5491eef8acd77d7e4eb3bd601c3168736bd20e
+PODFILE CHECKSUM: 656377268d0bf162a9906887729bc76033b3bf00
 
 COCOAPODS: 1.2.1
