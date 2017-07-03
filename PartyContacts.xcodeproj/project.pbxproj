@@ -18,6 +18,9 @@
 		4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */; };
 		4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2362F1F00ACA2003CAA9E /* MineViewController.m */; };
 		4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */; };
+		4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236401F0A2367003CAA9E /* BaseRequest.m */; };
+		4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236431F0A2394003CAA9E /* ServerAPIResponse.m */; };
+		4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236461F0A78EC003CAA9E /* ServerAPIConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,12 @@
 		4CF2362F1F00ACA2003CAA9E /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		4CF236391F00B5E2003CAA9E /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		4CF2363F1F0A2367003CAA9E /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		4CF236401F0A2367003CAA9E /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		4CF236421F0A2394003CAA9E /* ServerAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIResponse.h; sourceTree = "<group>"; };
+		4CF236431F0A2394003CAA9E /* ServerAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIResponse.m; sourceTree = "<group>"; };
+		4CF236451F0A78EC003CAA9E /* ServerAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIConstants.h; sourceTree = "<group>"; };
+		4CF236461F0A78EC003CAA9E /* ServerAPIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIConstants.m; sourceTree = "<group>"; };
 		9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.debug.xcconfig"; sourceTree = "<group>"; };
 		AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyContacts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7977D993A1E9F9741C7CBD /* Pods-PartyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 		4CF2360A1F00AB24003CAA9E /* PartyContacts */ = {
 			isa = PBXGroup;
 			children = (
+				4CF2363E1F0A2345003CAA9E /* ServerAPI */,
 				4CF236371F00B5B6003CAA9E /* ThirdParty */,
 				4CF236351F00B583003CAA9E /* ViewControllers */,
 				4CF2360B1F00AB24003CAA9E /* Supporting Files */,
@@ -128,6 +138,19 @@
 				4CF2363A1F00B5E2003CAA9E /* UINavigationBar+Awesome.m */,
 			);
 			path = LTNavigationBar;
+			sourceTree = "<group>";
+		};
+		4CF2363E1F0A2345003CAA9E /* ServerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4CF2363F1F0A2367003CAA9E /* BaseRequest.h */,
+				4CF236401F0A2367003CAA9E /* BaseRequest.m */,
+				4CF236421F0A2394003CAA9E /* ServerAPIResponse.h */,
+				4CF236431F0A2394003CAA9E /* ServerAPIResponse.m */,
+				4CF236451F0A78EC003CAA9E /* ServerAPIConstants.h */,
+				4CF236461F0A78EC003CAA9E /* ServerAPIConstants.m */,
+			);
+			path = ServerAPI;
 			sourceTree = "<group>";
 		};
 		8EF51CAD7F792FD37FFB2977 /* Pods */ = {
@@ -270,10 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */,
+				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
 				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
+				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
@@ -437,6 +463,7 @@
 				4CF236241F00AB24003CAA9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
