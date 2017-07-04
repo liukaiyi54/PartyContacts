@@ -8,5 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kServerHostname;
+extern NSString *const kServerBaseURL;
+
+
 extern const NSInteger kServerAPICodeSuccess;
 extern const NSInteger kServerAPICodeNetworkError;

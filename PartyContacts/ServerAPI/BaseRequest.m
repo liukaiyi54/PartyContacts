@@ -10,4 +10,16 @@
 
 @implementation BaseRequest
 
+// to override in subclass
+- (NSString *)requestURI {
+    return @"";
+}
+
+- (NSString *)requestJson {
+    return @"";
+}
+
+
+
+
 @end

@@ -8,5 +8,16 @@
 
 #import "ServerAPIConstants.h"
 
+#if DEBUG
+NSString *const kServerHostname = @"test.guiderank.org";
+NSString *const kServerBaseURL = @"http://test.guiderank.org/guiderank-web";
+#elif Beta
+NSString *const kServerHostname = @"test.guiderank.org";
+NSString *const kServerBaseURL = @"http://test.guiderank.org/guiderank-web";
+#else
+NSString *const kServerHostname = @"zone.guiderank.org";
+NSString *const kServerBaseURL = @"http://zone.guiderank.org/guiderank-web";
+#endif
+
 const NSInteger kServerAPICodeSuccess = 1;
 const NSInteger kServerAPICodeNetworkError = -1111;
