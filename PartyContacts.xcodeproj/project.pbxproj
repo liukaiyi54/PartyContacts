@@ -23,6 +23,11 @@
 		4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236461F0A78EC003CAA9E /* ServerAPIConstants.m */; };
 		4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2364B1F0A8325003CAA9E /* URLCacheDAO.m */; };
 		4CF236501F0BBDB2003CAA9E /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2364F1F0BBDB2003CAA9E /* StringUtils.m */; };
+		4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236521F0BC96B003CAA9E /* URLUtils.m */; };
+		4CF2365A1F0D1692003CAA9E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236551F0D1692003CAA9E /* LICENSE */; };
+		4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236581F0D1692003CAA9E /* NSURL+QueryDictionary.m */; };
+		4CF2365C1F0D1692003CAA9E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236591F0D1692003CAA9E /* README.md */; };
+		4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,14 @@
 		4CF2364B1F0A8325003CAA9E /* URLCacheDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLCacheDAO.m; sourceTree = "<group>"; };
 		4CF2364E1F0BBDB2003CAA9E /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		4CF2364F1F0BBDB2003CAA9E /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
+		4CF236511F0BC96B003CAA9E /* URLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLUtils.h; sourceTree = "<group>"; };
+		4CF236521F0BC96B003CAA9E /* URLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLUtils.m; sourceTree = "<group>"; };
+		4CF236551F0D1692003CAA9E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4CF236571F0D1692003CAA9E /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
+		4CF236581F0D1692003CAA9E /* NSURL+QueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryDictionary.m"; sourceTree = "<group>"; };
+		4CF236591F0D1692003CAA9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4CF2365D1F0D2084003CAA9E /* ServerAPIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIUtils.h; sourceTree = "<group>"; };
+		4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIUtils.m; sourceTree = "<group>"; };
 		9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.debug.xcconfig"; sourceTree = "<group>"; };
 		AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PartyContacts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7977D993A1E9F9741C7CBD /* Pods-PartyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +147,7 @@
 		4CF236371F00B5B6003CAA9E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */,
 				4CF236381F00B5E2003CAA9E /* LTNavigationBar */,
 			);
 			name = ThirdParty;
@@ -175,8 +189,31 @@
 			children = (
 				4CF2364E1F0BBDB2003CAA9E /* StringUtils.h */,
 				4CF2364F1F0BBDB2003CAA9E /* StringUtils.m */,
+				4CF236511F0BC96B003CAA9E /* URLUtils.h */,
+				4CF236521F0BC96B003CAA9E /* URLUtils.m */,
+				4CF2365D1F0D2084003CAA9E /* ServerAPIUtils.h */,
+				4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				4CF236551F0D1692003CAA9E /* LICENSE */,
+				4CF236561F0D1692003CAA9E /* NSURL+QueryDictionary */,
+				4CF236591F0D1692003CAA9E /* README.md */,
+			);
+			path = "NSURL+QueryDictionary";
+			sourceTree = "<group>";
+		};
+		4CF236561F0D1692003CAA9E /* NSURL+QueryDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				4CF236571F0D1692003CAA9E /* NSURL+QueryDictionary.h */,
+				4CF236581F0D1692003CAA9E /* NSURL+QueryDictionary.m */,
+			);
+			path = "NSURL+QueryDictionary";
 			sourceTree = "<group>";
 		};
 		8EF51CAD7F792FD37FFB2977 /* Pods */ = {
@@ -260,6 +297,7 @@
 			files = (
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
+				4CF2365A1F0D1692003CAA9E /* LICENSE in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */,
+				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
+				4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */,
 				4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */,
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
@@ -329,6 +369,8 @@
 				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
+				4CF2365C1F0D1692003CAA9E /* README.md in Sources */,
+				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);

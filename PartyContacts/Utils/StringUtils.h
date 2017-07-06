@@ -11,5 +11,6 @@
 @interface StringUtils : NSObject
 
 + (NSString *)md5StringFromString:(NSString *)string;
++ (NSString *)trimToEmpty:(NSString *)string;
 
 @end

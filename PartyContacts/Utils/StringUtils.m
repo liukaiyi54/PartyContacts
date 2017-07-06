@@ -28,4 +28,14 @@
     return outputString;
 }
 
++ (NSString *)trimToEmpty:(NSString *)string {
+    if (![string isKindOfClass:[NSString class]]) {
+        return @"";
+    }
+    if (string.length == 0) {
+        return @"";
+    }
+    return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
 @end

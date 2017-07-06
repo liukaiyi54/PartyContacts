@@ -21,3 +21,4 @@ NSString *const kServerBaseURL = @"http://zone.guiderank.org/guiderank-web";
 
 const NSInteger kServerAPICodeSuccess = 1;
 const NSInteger kServerAPICodeNetworkError = -1111;
+const NSInteger kServerAPICodeCancelError = -999;
