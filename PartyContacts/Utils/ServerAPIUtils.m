@@ -9,6 +9,9 @@
 #import "ServerAPIUtils.h"
 #import "ServerAPIConstants.h"
 #import <AFNetworking/AFNetworking.h>
+#import <MJExtension/MJExtension.h>
+
+NSString *const kNotificationServerAPIErrorOccurred = @"kNotificationServerAPIErrorOccurred";
 
 @implementation ServerAPIUtils
 
@@ -35,21 +38,73 @@
 //    mutableURLReq setAllHTTPHeaderFields:
     AFHTTPSessionManager *manager = [self jsonSessionManager];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:mutableURLReq completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        ServerAPIResponse *response = nil;
+        ServerAPIResponse *resp = nil;
         if (error) {
-            if (error.code == ) {
-                <#statements#>
+            if (error.code == kServerAPICodeCancelError) {
+                return;
             }
+            resp = [ServerAPIResponse responseForNetworkErrorWithMessage:error.description];
+        } else if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            resp = [ServerAPIResponse responseForMalformedResponseErrorWithMessage:nil];
+        } else {
+            resp = [ServerAPIResponse mj_objectWithKeyValues:responseObject];
+        }
+        if (!resp) {
+            resp = [ServerAPIResponse responseForMalformedResponseErrorWithMessage:nil];
+        }
+        if (!resp.success) {
+            [self notifyAPIErrorOccurredWithParameters:nil url:url response:resp error:[resp error]];
+        }
+        if (request) {
+            [request saveResponseToCacheFile:resp];
+        }
+        if (completion) {
+            completion(resp);
         }
     }];
+    [dataTask resume];
+    return dataTask;
 }
 
 + (NSURLSessionDataTask *)sendGETToURL:(NSURL *)url completion:(ServerAPICompletion)completion {
-    
+    return [[self class] sendGETToURL:url request:nil completion:completion];
 }
 
 + (NSURLSessionDataTask *)sendGETToURL:(NSURL *)url request:(BaseRequest *)request completion:(ServerAPICompletion)completion {
-    
+    NSMutableURLRequest *mutableURLReq = [NSMutableURLRequest requestWithURL:url];
+    [mutableURLReq setHTTPMethod:@"GET"];
+//    [mutableURLReq setAllHTTPHeaderFields:@{@"User-Agent":
+//                                            @"FA":
+//                                            @"FV":
+//                                            }];
+    AFHTTPSessionManager *manager = [self jsonSessionManager];
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:mutableURLReq completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        ServerAPIResponse *resp = nil;
+        if (error) {
+            if (error.code == kServerAPICodeCancelError) {
+                return;
+            }
+            resp = [ServerAPIResponse responseForNetworkErrorWithMessage:error.description];
+        } else if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            resp = [ServerAPIResponse responseForMalformedResponseErrorWithMessage:nil];
+        } else {
+            resp = [ServerAPIResponse mj_objectWithKeyValues:responseObject];
+        }
+        if (!resp) {
+            resp = [ServerAPIResponse responseForMalformedResponseErrorWithMessage:nil];
+        }
+        if (!resp.success) {
+            [self notifyAPIErrorOccurredWithParameters:nil url:url response:resp error:[resp error]];
+        }
+        if (request) {
+            [request saveResponseToCacheFile:resp];
+        }
+        if (completion) {
+            completion(resp);
+        }
+    }];
+    [dataTask resume];
+    return dataTask;
 }
 
 + (void)cancelAllRequests {
@@ -61,6 +116,16 @@
         NSURLSessionDataTask *task = obj;
         [task cancel];
     }];
+}
+
++ (void)notifyAPIErrorOccurredWithParameters:(id)params url:(NSURL *)url response:(ServerAPIResponse *)response error:(NSError *)error {
+    NSMutableDictionary *userInfo = [@{} mutableCopy];
+    if (params)     userInfo[@"parameters"] = params;
+    if (url)        userInfo[@"url"] = url;
+    if (response)   userInfo[@"response"] = response;
+    if (error)      userInfo[@"error"] = error;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationServerAPIErrorOccurred object:self userInfo:[userInfo copy]];
 }
 
 + (AFHTTPSessionManager *)jsonSessionManager {

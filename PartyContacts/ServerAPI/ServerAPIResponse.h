@@ -22,8 +22,9 @@
 @interface ServerAPIResponse(Error)
 
 - (NSString *)errorMessage;
-- (NSString *)error;
+- (NSError *)error;
 
 + (instancetype)responseForNetworkErrorWithMessage:(NSString *)message;
++ (instancetype)responseForMalformedResponseErrorWithMessage:(NSString *)message;
 
 @end

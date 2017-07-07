@@ -8,6 +8,9 @@
 
 #import "ServerAPIResponse.h"
 #import "ServerAPIConstants.h"
+#import "ErrorUtils.h"
+
+static NSString *kUnknownError = @"未知错误";
 
 @implementation ServerAPIResponse: NSObject
 
@@ -29,6 +32,9 @@
     return _code == kServerAPICodeSuccess;
 }
 
++ (NSArray *)mj_ignoredPropertyNames {
+    return @[@"success"];
+}
 
 @end
 
@@ -43,6 +49,56 @@
     }
     ServerAPIResponse *instance = [[ServerAPIResponse alloc] initWithDictionary:dict];
     return instance;
+}
+
++ (instancetype)responseForMalformedResponseErrorWithMessage:(NSString *)message {
+    NSDictionary *dict;
+    if (message) {
+        dict = @{@"code": @(KServerAPICodeMalformedResponse), @"message": message};
+    } else {
+        dict = @{@"code": @(KServerAPICodeMalformedResponse)};
+    }
+    ServerAPIResponse *instance = [[ServerAPIResponse alloc] initWithDictionary:dict];
+    return instance;
+}
+
+- (NSError *)error {
+    if ([self success]) {
+        return nil;
+    }
+    NSError *error = [ErrorUtils errorWithDomain:kErrorDomainServerAPIBusinessError code:self.code message:[self errorMessage]];
+    return error;
+}
+
+- (NSString *)errorMessage {
+    if (self.success) {
+        return nil;
+    }
+    NSString *errorMessage;
+    if (self.code == kServerAPICodeCustomErrorMessage) {
+        errorMessage = self.message;
+    } else {
+        errorMessage = [[[self class] errorMessageDictinary] objectForKey:@(self.code)];
+    }
+    if (errorMessage.length == 0) {
+        errorMessage = kUnknownError;
+    }
+    return errorMessage;
+}
+
++ (NSDictionary *)errorMessageDictinary {
+    static NSDictionary *dict;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dict = @{
+                 @(kServerAPICodeNetworkError): @"网络异常",
+                 @(KServerAPICodeMalformedResponse): @"系统异常",
+                 @(kServerAPICodeIllegalParameters): @"参数错误",
+                 @(kServerAPICodeAuthError): @"未登录",
+                 @(kServerAPICodeNotLoggedIn): @"系统错误",
+                 };
+    });
+    return dict;
 }
 
 @end

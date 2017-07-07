@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
+		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
 		4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236171F00AB24003CAA9E /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUtils.h; sourceTree = "<group>"; };
+		4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUtils.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF2360C1F00AB24003CAA9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF2360E1F00AB24003CAA9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				4CF236521F0BC96B003CAA9E /* URLUtils.m */,
 				4CF2365D1F0D2084003CAA9E /* ServerAPIUtils.h */,
 				4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */,
+				4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */,
+				4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4CF2365C1F0D1692003CAA9E /* README.md in Sources */,
+				4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */,
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
