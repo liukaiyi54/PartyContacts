@@ -13,6 +13,7 @@
 		4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E21F136D14006018C4 /* HomeService.m */; };
 		4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E81F136EF0006018C4 /* BannerAPI.m */; };
 		4C3DB7ED1F137100006018C4 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7EC1F137100006018C4 /* Banner.m */; };
+		4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */; };
 		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
@@ -47,6 +48,8 @@
 		4C3DB7E81F136EF0006018C4 /* BannerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerAPI.m; sourceTree = "<group>"; };
 		4C3DB7EB1F137100006018C4 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
 		4C3DB7EC1F137100006018C4 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		4C3DB7F01F13A37E006018C4 /* InfinitePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfinitePageView.h; sourceTree = "<group>"; };
+		4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfinitePageView.m; sourceTree = "<group>"; };
 		4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUtils.h; sourceTree = "<group>"; };
 		4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUtils.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +123,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4C3DB7EF1F13A36A006018C4 /* InfinitePageView */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DB7F01F13A37E006018C4 /* InfinitePageView.h */,
+				4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */,
+			);
+			path = InfinitePageView;
+			sourceTree = "<group>";
+		};
 		4CF235FF1F00AB24003CAA9E = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +199,7 @@
 		4CF236371F00B5B6003CAA9E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DB7EF1F13A36A006018C4 /* InfinitePageView */,
 				4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */,
 				4CF236381F00B5E2003CAA9E /* LTNavigationBar */,
 			);
@@ -419,6 +432,7 @@
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */,
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
+				4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);
