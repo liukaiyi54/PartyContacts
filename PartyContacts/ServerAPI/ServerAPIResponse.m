@@ -54,9 +54,9 @@ static NSString *kUnknownError = @"未知错误";
 + (instancetype)responseForMalformedResponseErrorWithMessage:(NSString *)message {
     NSDictionary *dict;
     if (message) {
-        dict = @{@"code": @(KServerAPICodeMalformedResponse), @"message": message};
+        dict = @{@"code": @(kServerAPICodeMalformedResponse), @"message": message};
     } else {
-        dict = @{@"code": @(KServerAPICodeMalformedResponse)};
+        dict = @{@"code": @(kServerAPICodeMalformedResponse)};
     }
     ServerAPIResponse *instance = [[ServerAPIResponse alloc] initWithDictionary:dict];
     return instance;
@@ -92,7 +92,7 @@ static NSString *kUnknownError = @"未知错误";
     dispatch_once(&onceToken, ^{
         dict = @{
                  @(kServerAPICodeNetworkError): @"网络异常",
-                 @(KServerAPICodeMalformedResponse): @"系统异常",
+                 @(kServerAPICodeMalformedResponse): @"系统异常",
                  @(kServerAPICodeIllegalParameters): @"参数错误",
                  @(kServerAPICodeAuthError): @"未登录",
                  @(kServerAPICodeNotLoggedIn): @"系统错误",

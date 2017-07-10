@@ -8,6 +8,7 @@
 
 #import "ServerAPIUtils.h"
 #import "ServerAPIConstants.h"
+#import "DeviceUtils.h"
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
 
@@ -35,7 +36,12 @@ NSString *const kNotificationServerAPIErrorOccurred = @"kNotificationServerAPIEr
     NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
     [mutableURLReq setHTTPBody:data];
     
-//    mutableURLReq setAllHTTPHeaderFields:
+    [mutableURLReq setAllHTTPHeaderFields:@{@"User-Agent": [DeviceUtils userAgent],
+                                            @"Content-Type": @"application/json",
+                                            @"Content-Length": [@(data.length) stringValue],
+                                            @"FA": [DeviceUtils idfaString],
+                                            @"FV": [DeviceUtils idfvString],
+                                            }];
     AFHTTPSessionManager *manager = [self jsonSessionManager];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:mutableURLReq completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         ServerAPIResponse *resp = nil;
@@ -73,10 +79,10 @@ NSString *const kNotificationServerAPIErrorOccurred = @"kNotificationServerAPIEr
 + (NSURLSessionDataTask *)sendGETToURL:(NSURL *)url request:(BaseRequest *)request completion:(ServerAPICompletion)completion {
     NSMutableURLRequest *mutableURLReq = [NSMutableURLRequest requestWithURL:url];
     [mutableURLReq setHTTPMethod:@"GET"];
-//    [mutableURLReq setAllHTTPHeaderFields:@{@"User-Agent":
-//                                            @"FA":
-//                                            @"FV":
-//                                            }];
+    [mutableURLReq setAllHTTPHeaderFields:@{@"User-Agent":[DeviceUtils userAgent],
+                                            @"FA": [DeviceUtils idfaString],
+                                            @"FV": [DeviceUtils idfvString],
+                                            }];
     AFHTTPSessionManager *manager = [self jsonSessionManager];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:mutableURLReq completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         ServerAPIResponse *resp = nil;

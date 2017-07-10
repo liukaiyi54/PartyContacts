@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
 		4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7D91F131EAD006018C4 /* DeviceUtils.m */; };
+		4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7DF1F1368B3006018C4 /* BaseService.m */; };
+		4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E21F136D14006018C4 /* HomeService.m */; };
+		4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E81F136EF0006018C4 /* BannerAPI.m */; };
+		4C3DB7ED1F137100006018C4 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7EC1F137100006018C4 /* Banner.m */; };
 		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
@@ -26,9 +30,7 @@
 		4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2364B1F0A8325003CAA9E /* URLCacheDAO.m */; };
 		4CF236501F0BBDB2003CAA9E /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2364F1F0BBDB2003CAA9E /* StringUtils.m */; };
 		4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236521F0BC96B003CAA9E /* URLUtils.m */; };
-		4CF2365A1F0D1692003CAA9E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236551F0D1692003CAA9E /* LICENSE */; };
 		4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236581F0D1692003CAA9E /* NSURL+QueryDictionary.m */; };
-		4CF2365C1F0D1692003CAA9E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4CF236591F0D1692003CAA9E /* README.md */; };
 		4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,14 @@
 		4C3DB7D91F131EAD006018C4 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		4C3DB7DB1F132FDC006018C4 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		4C3DB7DC1F133076006018C4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4C3DB7DE1F1368B3006018C4 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		4C3DB7DF1F1368B3006018C4 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		4C3DB7E11F136D14006018C4 /* HomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeService.h; sourceTree = "<group>"; };
+		4C3DB7E21F136D14006018C4 /* HomeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeService.m; sourceTree = "<group>"; };
+		4C3DB7E71F136EF0006018C4 /* BannerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerAPI.h; sourceTree = "<group>"; };
+		4C3DB7E81F136EF0006018C4 /* BannerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerAPI.m; sourceTree = "<group>"; };
+		4C3DB7EB1F137100006018C4 /* Banner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		4C3DB7EC1F137100006018C4 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
 		4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUtils.h; sourceTree = "<group>"; };
 		4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUtils.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,10 +79,8 @@
 		4CF2364F1F0BBDB2003CAA9E /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 		4CF236511F0BC96B003CAA9E /* URLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLUtils.h; sourceTree = "<group>"; };
 		4CF236521F0BC96B003CAA9E /* URLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLUtils.m; sourceTree = "<group>"; };
-		4CF236551F0D1692003CAA9E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4CF236571F0D1692003CAA9E /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
 		4CF236581F0D1692003CAA9E /* NSURL+QueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryDictionary.m"; sourceTree = "<group>"; };
-		4CF236591F0D1692003CAA9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4CF2365D1F0D2084003CAA9E /* ServerAPIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIUtils.h; sourceTree = "<group>"; };
 		4CF2365E1F0D2084003CAA9E /* ServerAPIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAPIUtils.m; sourceTree = "<group>"; };
 		9916C8790250D61FCA0377F4 /* Pods-PartyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartyContacts/Pods-PartyContacts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3DB7DD1F136877006018C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DB7DE1F1368B3006018C4 /* BaseService.h */,
+				4C3DB7DF1F1368B3006018C4 /* BaseService.m */,
+				4C3DB7E11F136D14006018C4 /* HomeService.h */,
+				4C3DB7E21F136D14006018C4 /* HomeService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4C3DB7EA1F1370ED006018C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DB7EB1F137100006018C4 /* Banner.h */,
+				4C3DB7EC1F137100006018C4 /* Banner.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4CF235FF1F00AB24003CAA9E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +141,8 @@
 		4CF2360A1F00AB24003CAA9E /* PartyContacts */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DB7EA1F1370ED006018C4 /* Models */,
+				4C3DB7DD1F136877006018C4 /* Services */,
 				4CF2364D1F0BBDA4003CAA9E /* Utils */,
 				4CF236491F0A830E003CAA9E /* Storage */,
 				4CF2363E1F0A2345003CAA9E /* ServerAPI */,
@@ -181,6 +211,8 @@
 				4CF236431F0A2394003CAA9E /* ServerAPIResponse.m */,
 				4CF236451F0A78EC003CAA9E /* ServerAPIConstants.h */,
 				4CF236461F0A78EC003CAA9E /* ServerAPIConstants.m */,
+				4C3DB7E71F136EF0006018C4 /* BannerAPI.h */,
+				4C3DB7E81F136EF0006018C4 /* BannerAPI.m */,
 			);
 			path = ServerAPI;
 			sourceTree = "<group>";
@@ -214,9 +246,7 @@
 		4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				4CF236551F0D1692003CAA9E /* LICENSE */,
 				4CF236561F0D1692003CAA9E /* NSURL+QueryDictionary */,
-				4CF236591F0D1692003CAA9E /* README.md */,
 			);
 			path = "NSURL+QueryDictionary";
 			sourceTree = "<group>";
@@ -311,7 +341,6 @@
 			files = (
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
-				4CF2365A1F0D1692003CAA9E /* LICENSE in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,10 +402,14 @@
 			files = (
 				4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */,
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
+				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,
+				4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */,
 				4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */,
+				4C3DB7ED1F137100006018C4 /* Banner.m in Sources */,
 				4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */,
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
+				4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */,
 				4CF236501F0BBDB2003CAA9E /* StringUtils.m in Sources */,
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
@@ -384,7 +417,6 @@
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
-				4CF2365C1F0D1692003CAA9E /* README.md in Sources */,
 				4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */,
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
