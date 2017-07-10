@@ -10,4 +10,5 @@ target 'PartyContacts' do
 	pod 'AFNetworking', '~> 3.1.0'
 	pod 'PureLayout'
     pod 'MJExtension'
+    pod 'UIDevice-Hardware'
 end

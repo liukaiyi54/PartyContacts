@@ -18,7 +18,7 @@ typedef void(^UploadFileCompletion) (NSString *fileDownloadUrl, NSError *error);
 + (NSURLSessionDataTask *)doRequest:(BaseRequest *)request completion:(ServerAPICompletion)completion;
 + (NSURLSessionDataTask *)sendJSON:(NSString *)json toURL:(NSURL *)url completion:(ServerAPICompletion)completion;
 + (NSURLSessionDataTask *)sendGETToURL:(NSURL *)url completion:(ServerAPICompletion)completion;
-+ (NSURLSessionDataTask *)uploadData:(NSData *)data fileName:(NSString *)fileName mimeType:(NSString *)mimeType completion:(UploadFileCompletion)completion;
+//+ (NSURLSessionDataTask *)uploadData:(NSData *)data fileName:(NSString *)fileName mimeType:(NSString *)mimeType completion:(UploadFileCompletion)completion;
 
 + (void)cancelAllRequests;
 

@@ -23,6 +23,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - UIDevice-Hardware (0.1.10)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - MJExtension
   - PureLayout
   - SDWebImage
+  - UIDevice-Hardware
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -39,7 +41,8 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UIDevice-Hardware: 4bb15b9bd9878762ab879ac86185baad17b6c3ff
 
-PODFILE CHECKSUM: 656377268d0bf162a9906887729bc76033b3bf00
+PODFILE CHECKSUM: 8f50a53f86efa8e7780eb7e928418704bd99a0c9
 
 COCOAPODS: 1.2.1
