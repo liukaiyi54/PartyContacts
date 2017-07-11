@@ -14,6 +14,8 @@
 		4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E81F136EF0006018C4 /* BannerAPI.m */; };
 		4C3DB7ED1F137100006018C4 /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7EC1F137100006018C4 /* Banner.m */; };
 		4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */; };
+		4C3DB7F71F13B51B006018C4 /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */; };
+		4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */; };
 		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
@@ -50,6 +52,9 @@
 		4C3DB7EC1F137100006018C4 /* Banner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
 		4C3DB7F01F13A37E006018C4 /* InfinitePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfinitePageView.h; sourceTree = "<group>"; };
 		4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfinitePageView.m; sourceTree = "<group>"; };
+		4C3DB7F41F13B51B006018C4 /* HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell.h; sourceTree = "<group>"; };
+		4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
+		4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUtils.h; sourceTree = "<group>"; };
 		4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUtils.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +137,16 @@
 			path = InfinitePageView;
 			sourceTree = "<group>";
 		};
+		4C3DB7F31F13B4C8006018C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DB7F41F13B51B006018C4 /* HomePageCollectionViewCell.h */,
+				4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */,
+				4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4CF235FF1F00AB24003CAA9E = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +168,7 @@
 		4CF2360A1F00AB24003CAA9E /* PartyContacts */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DB7F31F13B4C8006018C4 /* Views */,
 				4C3DB7EA1F1370ED006018C4 /* Models */,
 				4C3DB7DD1F136877006018C4 /* Services */,
 				4CF2364D1F0BBDA4003CAA9E /* Utils */,
@@ -352,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
@@ -427,6 +444,7 @@
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
 				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
+				4C3DB7F71F13B51B006018C4 /* HomePageCollectionViewCell.m in Sources */,
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,

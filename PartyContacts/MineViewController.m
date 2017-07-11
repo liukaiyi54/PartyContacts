@@ -18,6 +18,14 @@
     [super viewDidLoad];
     
     self.title = @"我的";
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationController.navigationBar.barTintColor = [UIColor flatRedColor];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationController.navigationBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {

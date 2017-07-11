@@ -7,16 +7,20 @@
 //
 
 #import "HomePageViewController.h"
-#import "HomeService.h"
 #import "InfinitePageView.h"
+#import "HomePageCollectionViewCell.h"
 #import "Banner.h"
 
+#import "HomeService.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface HomePageViewController () <InfinitePageViewDataSource>
+static NSString *const kCollectionViewCell = @"kCollectionViewCell";
+
+@interface HomePageViewController () <InfinitePageViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, copy) NSArray<Banner *> *banners;
 @property (nonatomic, strong) InfinitePageView *pageView;
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -28,15 +32,25 @@
     self.title = @"党支部通讯录";
     
     [self queryData];
+    [self configureCollectionView];
     
     [self.view addSubview:self.pageView];
+    [self.view addSubview:self.collectionView];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationController.navigationBar.barTintColor = [UIColor flatRedColor];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationController.navigationBar.translucent = NO;
     self.tabBarController.tabBar.translucent = NO;
 }
 
-#pragma mark - dataSource
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - InfinitePageViewDataSource
 - (NSArray *)pageViews {
     NSMutableArray *views = [[NSMutableArray alloc] init];
     if (self.banners.count) {
@@ -50,6 +64,32 @@
     return views;
 }
 
+#pragma mark - UICollectionViewDelegate & etc
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 8;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = SCREEN_WIDTH/3-0.5;
+    return CGSizeMake(width, width-10.0);
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCell forIndexPath:indexPath];
+    cell.name = [self names][indexPath.row];
+    return cell;
+}
+
+#pragma mark - private
+- (void)configureCollectionView {
+    NSString *nibName = NSStringFromClass([HomePageCollectionViewCell class]);
+    [self.collectionView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellWithReuseIdentifier:kCollectionViewCell];
+}
+
 - (void)queryData {
     __weak typeof(self) weakSelf = self;
     [[HomeService sharedManager] queryHomeBannersWithCompletion:^(NSArray *banners, NSError *error) {
@@ -60,10 +100,33 @@
 
 - (InfinitePageView *)pageView {
     if (!_pageView) {
-        _pageView = [[InfinitePageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+        CGFloat aspectRatio = 1.7;
+        CGFloat height = ceilf(SCREEN_WIDTH/aspectRatio);
+        _pageView = [[InfinitePageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, height)];
         _pageView.dataSource = self;
     }
     return _pageView;
+}
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        layout.minimumLineSpacing = 0.5f;
+        layout.minimumInteritemSpacing = 0.5f;
+        
+        CGFloat height = ceil(SCREEN_WIDTH/1.7);
+        CGRect frame = CGRectMake(0, height, SCREEN_WIDTH, SCREEN_HEIGHT-height);
+        _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = UIColorFromRGB(0xf8f8f8);
+    }
+    return _collectionView;
+}
+
+- (NSArray *)names {
+    return @[@"支部党员大会", @"支部委员会", @"党小组会", @"党课", @"党费缴纳", @"群通知", @"投票", @"组织活动"];
 }
 
 @end
