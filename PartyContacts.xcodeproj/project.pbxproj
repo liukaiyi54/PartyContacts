@@ -16,6 +16,9 @@
 		4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F11F13A37E006018C4 /* InfinitePageView.m */; };
 		4C3DB7F71F13B51B006018C4 /* HomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */; };
 		4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */; };
+		4C3DB7FD1F14A9EB006018C4 /* PartyContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7FC1F14A9EB006018C4 /* PartyContactsViewController.m */; };
+		4C3DB8001F14AA27006018C4 /* LocalContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7FF1F14AA27006018C4 /* LocalContactsViewController.m */; };
+		4C3DB8051F14AAB1006018C4 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB8041F14AAB1006018C4 /* CAPSPageMenu.m */; };
 		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
@@ -55,6 +58,12 @@
 		4C3DB7F41F13B51B006018C4 /* HomePageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCollectionViewCell.h; sourceTree = "<group>"; };
 		4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageCollectionViewCell.xib; sourceTree = "<group>"; };
+		4C3DB7FB1F14A9EB006018C4 /* PartyContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyContactsViewController.h; sourceTree = "<group>"; };
+		4C3DB7FC1F14A9EB006018C4 /* PartyContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyContactsViewController.m; sourceTree = "<group>"; };
+		4C3DB7FE1F14AA27006018C4 /* LocalContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalContactsViewController.h; sourceTree = "<group>"; };
+		4C3DB7FF1F14AA27006018C4 /* LocalContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalContactsViewController.m; sourceTree = "<group>"; };
+		4C3DB8031F14AAB1006018C4 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		4C3DB8041F14AAB1006018C4 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
 		4C655C391F0F2D1400B6CD66 /* ErrorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUtils.h; sourceTree = "<group>"; };
 		4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUtils.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +156,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4C3DB8021F14AAB1006018C4 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4C3DB8031F14AAB1006018C4 /* CAPSPageMenu.h */,
+				4C3DB8041F14AAB1006018C4 /* CAPSPageMenu.m */,
+			);
+			path = PageMenu;
+			sourceTree = "<group>";
+		};
 		4CF235FF1F00AB24003CAA9E = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +226,10 @@
 				4CF2362C1F00AC7E003CAA9E /* ContactsViewController.m */,
 				4CF2362E1F00ACA2003CAA9E /* MineViewController.h */,
 				4CF2362F1F00ACA2003CAA9E /* MineViewController.m */,
+				4C3DB7FB1F14A9EB006018C4 /* PartyContactsViewController.h */,
+				4C3DB7FC1F14A9EB006018C4 /* PartyContactsViewController.m */,
+				4C3DB7FE1F14AA27006018C4 /* LocalContactsViewController.h */,
+				4C3DB7FF1F14AA27006018C4 /* LocalContactsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 		4CF236371F00B5B6003CAA9E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4C3DB8021F14AAB1006018C4 /* PageMenu */,
 				4C3DB7EF1F13A36A006018C4 /* InfinitePageView */,
 				4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */,
 				4CF236381F00B5E2003CAA9E /* LTNavigationBar */,
@@ -437,6 +460,7 @@
 				4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */,
 				4C3DB7ED1F137100006018C4 /* Banner.m in Sources */,
 				4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */,
+				4C3DB8001F14AA27006018C4 /* LocalContactsViewController.m in Sources */,
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
 				4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */,
@@ -445,6 +469,7 @@
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
 				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
 				4C3DB7F71F13B51B006018C4 /* HomePageCollectionViewCell.m in Sources */,
+				4C3DB8051F14AAB1006018C4 /* CAPSPageMenu.m in Sources */,
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
@@ -452,6 +477,7 @@
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
 				4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
+				4C3DB7FD1F14A9EB006018C4 /* PartyContactsViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
