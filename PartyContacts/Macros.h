@@ -9,6 +9,10 @@
 #ifndef Macros_h
 #define Macros_h
 
+#ifndef WeakSelf
+#define WeakSelf __weak typeof(self) weakSelf = self;
+#endif
+
 #ifndef SCREEN_WIDTH
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #endif
@@ -40,5 +44,19 @@ green:((CGFloat)((rgbValue & 0x00FF00) >> 8))/255.0 \
 blue:((CGFloat)(rgbValue & 0x0000FF))/255.0 \
 alpha:alphaValue]
 #endif
+
+#define DISPATCH_MAIN_SAFE_SYNC(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_sync(dispatch_get_main_queue(), block);\
+}
+
+#define DISPATCH_MAIN_SAFE_ASYNC(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
 
 #endif /* Macros_h */
