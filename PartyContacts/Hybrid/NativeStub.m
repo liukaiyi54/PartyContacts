@@ -39,6 +39,7 @@
             [js appendFormat:@", %@", obj];
         }
     }
+    
     [js appendString:@");"];
     [self evaluateScript:[js copy]];
 }

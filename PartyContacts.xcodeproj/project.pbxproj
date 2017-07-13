@@ -23,6 +23,7 @@
 		4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C655C3A1F0F2D1400B6CD66 /* ErrorUtils.m */; };
 		4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570B1F15BE1B00333611 /* NativeStub.m */; };
 		4CBE570F1F15C9DC00333611 /* NativeStub+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */; };
+		4CBE57121F16011E00333611 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE57111F16011E00333611 /* WebViewController.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
 		4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236171F00AB24003CAA9E /* Main.storyboard */; };
@@ -75,6 +76,8 @@
 		4CBE570B1F15BE1B00333611 /* NativeStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeStub.m; sourceTree = "<group>"; };
 		4CBE570D1F15C9DC00333611 /* NativeStub+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NativeStub+Navigation.h"; sourceTree = "<group>"; };
 		4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NativeStub+Navigation.m"; sourceTree = "<group>"; };
+		4CBE57101F16011E00333611 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4CBE57111F16011E00333611 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF2360C1F00AB24003CAA9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF2360E1F00AB24003CAA9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				4C3DB7FC1F14A9EB006018C4 /* PartyContactsViewController.m */,
 				4C3DB7FE1F14AA27006018C4 /* LocalContactsViewController.h */,
 				4C3DB7FF1F14AA27006018C4 /* LocalContactsViewController.m */,
+				4CBE57101F16011E00333611 /* WebViewController.h */,
+				4CBE57111F16011E00333611 /* WebViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */,
+				4CBE57121F16011E00333611 /* WebViewController.m in Sources */,
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
 				4C3DB80A1F151C50006018C4 /* NativeInjector.m in Sources */,
 				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,

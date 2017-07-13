@@ -12,6 +12,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 static const void *const kAssociatedNativeStubKey = &kAssociatedNativeStubKey;
+static NSString *const kNativeProperty = @"partyContactsNative";
 
 @implementation NativeInjector
 
@@ -20,28 +21,29 @@ static const void *const kAssociatedNativeStubKey = &kAssociatedNativeStubKey;
 }
 
 + (void)injectNativeStubForWebView:(UIWebView *)webView viewController:(UIViewController *)viewController {
-    JSContext *context = [self webViewJSContext:webView];
-//    NSString *host = [self webViewHost:webView];
+    // get JSContext from UIWebView instance
+    JSContext *context = [self webviewJSContext:webView];
     
-    NativeStub *stub = [self nativeStubForWebView:webView controller:viewController];
+    // 给 window 对象增加一个属性 cloudoorNative，用于 js 调用objc代码
+    NativeStub *native = [self nativeStubForWebView:webView controller:viewController];
     
-    __weak typeof(stub) weakStub = stub;
+    __weak typeof(native) weakNative = native;
     NSMutableDictionary *partyContactsNative =
     [@{
        @"closeWebBrowser": ^() {
-            [weakStub closeWebBrowser];
+            [weakNative closeWebBrowser];
         },
        @"goBack": ^() {
-            [weakStub goBack];
+            [weakNative goBack];
         }
-    } mutableCopy];
+       } mutableCopy];
     
-    [context.globalObject setValue:[partyContactsNative copy] forProperty:@"partyContactsNative"];
+    [context.globalObject setValue:[partyContactsNative copy] forProperty:kNativeProperty];
 }
 
 + (void)cleanNativeStubForWebView:(UIWebView *)webView {
-    JSContext *context = [self webViewJSContext:webView];
-    [context.globalObject setValue:nil forKey:@"partyContactsNative"];
+    JSContext *context = [self webviewJSContext:webView];
+    [context.globalObject setValue:nil forProperty:kNativeProperty];
     objc_setAssociatedObject(webView, kAssociatedNativeStubKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -49,24 +51,27 @@ static const void *const kAssociatedNativeStubKey = &kAssociatedNativeStubKey;
     return [self nativeStubForWebView:webView controller:nil];
 }
 
-+ (NativeStub *)nativeStubForWebView:(UIWebView *)webView controller:(UIViewController *)controller {
++ (NativeStub *)nativeStubForWebView:(UIWebView *)webView controller:(UIViewController *)controller{
     if (!webView) {
         return nil;
     }
+    
     [self cleanNativeStubForWebView:webView];
-    NativeStub *stub = [[NativeStub alloc] init];
-    objc_setAssociatedObject(webView, kAssociatedNativeStubKey, stub, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    stub.webView = webView;
-    stub.viewController = controller;
-    return stub;
+    
+    NativeStub *native = [[NativeStub alloc] init];
+    objc_setAssociatedObject(webView, kAssociatedNativeStubKey, native, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    native.webView = webView;
+    native.viewController = controller;
+    return native;
 }
 
-+ (JSContext *)webViewJSContext:(UIWebView *)webView {
++ (JSContext *)webviewJSContext:(UIWebView *)webView {
     JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     return context;
 }
 
-+ (NSString *)webViewHost:(UIWebView *)webView {
++ (NSString *)webviewHost:(UIWebView *)webView {
     NSString *host = [webView stringByEvaluatingJavaScriptFromString:@"document.domain"];
     return host;
 }

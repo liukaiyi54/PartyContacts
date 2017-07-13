@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 #import "InfinitePageView.h"
 #import "HomePageCollectionViewCell.h"
+#import "WebViewController.h"
 #import "Banner.h"
 
 #import "HomeService.h"
@@ -40,6 +41,7 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationController.navigationBar.barTintColor = [UIColor flatRedColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationController.navigationBar.translucent = NO;
@@ -82,6 +84,12 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     HomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCell forIndexPath:indexPath];
     cell.name = [self names][indexPath.row];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    WebViewController *vc = [[WebViewController alloc] init];
+    vc.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - private
