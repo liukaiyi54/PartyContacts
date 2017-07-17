@@ -81,8 +81,7 @@
         requestMethod = @"POST";
     }
     
-    NSString *appVersion = @"1.0.0";
-    NSString *requestInfo = [NSString stringWithFormat:@"Method:%@ BaseUrl:%@ URI:%@ ArgumentJson:%@ AppVersion:%@", requestMethod, baseUrl, requestURI, requestJson, appVersion];
+    NSString *requestInfo = [NSString stringWithFormat:@"Method:%@ BaseUrl:%@ URI:%@ ArgumentJson:%@ AppVersion:%@", requestMethod, baseUrl, requestURI, requestJson, kAppVersion];
     
     NSString *cacheFileName = [StringUtils md5StringFromString:requestInfo];
     return cacheFileName;

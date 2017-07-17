@@ -16,6 +16,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 static NSString *const kCollectionViewCell = @"kCollectionViewCell";
+static CGFloat const kTabHeight = 50.0f;
 
 @interface HomePageViewController () <InfinitePageViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -77,7 +78,8 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat width = SCREEN_WIDTH/3-0.5;
-    return CGSizeMake(width, width-10.0);
+    CGFloat height = (SCREEN_HEIGHT-ceil(SCREEN_WIDTH/1.7)-kTabHeight-64)/3;
+    return CGSizeMake(width, height);
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -124,7 +126,7 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
         layout.minimumInteritemSpacing = 0.5f;
         
         CGFloat height = ceil(SCREEN_WIDTH/1.7);
-        CGRect frame = CGRectMake(0, height, SCREEN_WIDTH, SCREEN_HEIGHT-height);
+        CGRect frame = CGRectMake(0, height, SCREEN_WIDTH, SCREEN_HEIGHT-height-kTabHeight-64);
         _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

@@ -68,6 +68,7 @@
 - (void)setupViews {
     [self.view addSubview:self.webView];
     [self.view addSubview:self.indicator];
+    [self.indicator autoCenterInSuperview];
 }
 
 - (void)loadWebView {
@@ -87,7 +88,6 @@
 - (UIActivityIndicatorView *)indicator {
     if (!_indicator) {
         _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        _indicator.center = self.view.center;
     }
     return _indicator;
 }
