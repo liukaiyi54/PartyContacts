@@ -7,8 +7,15 @@
 //
 
 #import "LocalContactsViewController.h"
+#import "PPGetAddressBook.h"
 
-@interface LocalContactsViewController ()
+static NSString *const kTableViewCell = @"kTableViewCell";
+
+@interface LocalContactsViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSDictionary *contactPeopleDict;
+@property (nonatomic, copy) NSArray *keys;
 
 @end
 
@@ -16,8 +23,103 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.title = @"本地联系人";
+    [self setupTableView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.frame = CGRectMake(0, 0, 80, 80);
+    indicator.center = CGPointMake([UIScreen mainScreen].bounds.size.width*0.5, [UIScreen mainScreen].bounds.size.height*0.5-80);
+    indicator.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
+    indicator.clipsToBounds = YES;
+    indicator.layer.cornerRadius = 6;
+    [indicator startAnimating];
+    [self.view addSubview:indicator];
+    
+    [PPGetAddressBook getOrderAddressBook:^(NSDictionary<NSString *,NSArray *> *addressBookDict, NSArray *nameKeys) {
+        [indicator stopAnimating];
+        
+        self.contactPeopleDict = addressBookDict;
+        self.keys = nameKeys;
+        
+        [self.tableView reloadData];
+    } authorizationFailure:^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"请在iPhone的“设置-隐私-通讯录”选项中，允许PPAddressBook访问您的通讯录"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"知道了"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    
+    self.tableView.rowHeight = 60;
+}
+
+- (void)setupTableView {
+    [self.view addSubview:self.tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
+}
+
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return _keys.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSString *key = _keys[section];
+    return [_contactPeopleDict[key] count];
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return _keys[section];
+}
+
+- (NSArray*)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return _keys;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *reuseIdentifier = @"cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
+    
+    NSString *key = _keys[indexPath.section];
+    PPPersonModel *people = [_contactPeopleDict[key] objectAtIndex:indexPath.row];
+    
+//    cell.imageView.image = people.headerImage ? people.headerImage : [UIImage imageNamed:@"defult"];
+//    cell.imageView.layer.cornerRadius = 60/2;
+//    cell.imageView.clipsToBounds = YES;
+    cell.textLabel.text = people.name;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *key = _keys[indexPath.section];
+    PPPersonModel *people = [_contactPeopleDict[key] objectAtIndex:indexPath.row];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:people.name
+                                                    message:[NSString stringWithFormat:@"%@",people.mobileArray.firstObject]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
 
 @end

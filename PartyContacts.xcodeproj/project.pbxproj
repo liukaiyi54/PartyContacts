@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
+		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
+		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
+		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
 		4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7D91F131EAD006018C4 /* DeviceUtils.m */; };
 		4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7DF1F1368B3006018C4 /* BaseService.m */; };
 		4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3DB7E21F136D14006018C4 /* HomeService.m */; };
@@ -45,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
+		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
+		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
+		4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGetAddressBook.m; sourceTree = "<group>"; };
+		4C1DF09D1F1DF1AD009BC27F /* PPPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPersonModel.h; sourceTree = "<group>"; };
+		4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPersonModel.m; sourceTree = "<group>"; };
+		4C1DF09F1F1DF1AD009BC27F /* PPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSingleton.h; sourceTree = "<group>"; };
 		4C3DB7D81F131EAD006018C4 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
 		4C3DB7D91F131EAD006018C4 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		4C3DB7DB1F132FDC006018C4 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -129,6 +139,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1DF0981F1DF1AD009BC27F /* PPGetAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */,
+				4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */,
+				4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */,
+				4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */,
+				4C1DF09D1F1DF1AD009BC27F /* PPPersonModel.h */,
+				4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */,
+				4C1DF09F1F1DF1AD009BC27F /* PPSingleton.h */,
+			);
+			path = PPGetAddressBook;
+			sourceTree = "<group>";
+		};
 		4C3DB7DD1F136877006018C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +289,7 @@
 		4CF236371F00B5B6003CAA9E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4C1DF0981F1DF1AD009BC27F /* PPGetAddressBook */,
 				4C3DB8021F14AAB1006018C4 /* PageMenu */,
 				4C3DB7EF1F13A36A006018C4 /* InfinitePageView */,
 				4CF236541F0D1692003CAA9E /* NSURL+QueryDictionary */,
@@ -486,6 +511,7 @@
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
 				4C3DB80A1F151C50006018C4 /* NativeInjector.m in Sources */,
 				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,
+				4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */,
 				4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */,
 				4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */,
 				4C3DB7ED1F137100006018C4 /* Banner.m in Sources */,
@@ -510,6 +536,8 @@
 				4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4C3DB7FD1F14A9EB006018C4 /* PartyContactsViewController.m in Sources */,
+				4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */,
+				4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
