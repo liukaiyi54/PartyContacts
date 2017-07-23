@@ -26,9 +26,12 @@ static NSString *const kTableViewCell = @"kTableViewCell";
 
     self.title = @"本地联系人";
     [self setupTableView];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
+- (void)setupTableView {
+    [self.view addSubview:self.tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     indicator.frame = CGRectMake(0, 0, 80, 80);
     indicator.center = CGPointMake([UIScreen mainScreen].bounds.size.width*0.5, [UIScreen mainScreen].bounds.size.height*0.5-80);
@@ -46,20 +49,11 @@ static NSString *const kTableViewCell = @"kTableViewCell";
         
         [self.tableView reloadData];
     } authorizationFailure:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                        message:@"请在iPhone的“设置-隐私-通讯录”选项中，允许PPAddressBook访问您的通讯录"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"知道了"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请在iPhone的“设置-隐私-通讯录”选项中，允许党支部通讯录访问您的通讯录" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction: action];
+        [self presentViewController:alert animated:YES completion:nil];
     }];
-    
-    self.tableView.rowHeight = 60;
-}
-
-- (void)setupTableView {
-    [self.view addSubview:self.tableView];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -105,17 +99,15 @@ static NSString *const kTableViewCell = @"kTableViewCell";
     NSString *key = _keys[indexPath.section];
     PPPersonModel *people = [_contactPeopleDict[key] objectAtIndex:indexPath.row];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:people.name
-                                                    message:[NSString stringWithFormat:@"%@",people.mobileArray.firstObject]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:people.name message:people.mobileArray.firstObject preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CGRectGetHeight(self.view.bounds)-154) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
     }
