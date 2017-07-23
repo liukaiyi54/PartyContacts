@@ -24,7 +24,7 @@ static NSString *const kNativeProperty = @"partyContactsNative";
     // get JSContext from UIWebView instance
     JSContext *context = [self webviewJSContext:webView];
     
-    // 给 window 对象增加一个属性 cloudoorNative，用于 js 调用objc代码
+    // 给 window 对象增加一个属性 native，用于 js 调用objc代码
     NativeStub *native = [self nativeStubForWebView:webView controller:viewController];
     
     __weak typeof(native) weakNative = native;
