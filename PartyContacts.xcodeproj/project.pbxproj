@@ -29,6 +29,9 @@
 		4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570B1F15BE1B00333611 /* NativeStub.m */; };
 		4CBE570F1F15C9DC00333611 /* NativeStub+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */; };
 		4CBE57121F16011E00333611 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE57111F16011E00333611 /* WebViewController.m */; };
+		4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E59D1F25949200E30779 /* HeaderView.m */; };
+		4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5E59F1F2594A200E30779 /* HeaderView.xib */; };
+		4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */; };
 		4CF2360D1F00AB24003CAA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360C1F00AB24003CAA9E /* main.m */; };
 		4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2360F1F00AB24003CAA9E /* AppDelegate.m */; };
 		4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF236171F00AB24003CAA9E /* Main.storyboard */; };
@@ -94,6 +97,11 @@
 		4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NativeStub+Navigation.m"; sourceTree = "<group>"; };
 		4CBE57101F16011E00333611 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4CBE57111F16011E00333611 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4CC5E59C1F25949200E30779 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		4CC5E59D1F25949200E30779 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		4CC5E59F1F2594A200E30779 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		4CC5E5A11F2598AE00E30779 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NibLoading.h"; sourceTree = "<group>"; };
+		4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NibLoading.m"; sourceTree = "<group>"; };
 		4CF236081F00AB24003CAA9E /* PartyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF2360C1F00AB24003CAA9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF2360E1F00AB24003CAA9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +202,9 @@
 				4C3DB7F41F13B51B006018C4 /* HomePageCollectionViewCell.h */,
 				4C3DB7F51F13B51B006018C4 /* HomePageCollectionViewCell.m */,
 				4C3DB7F61F13B51B006018C4 /* HomePageCollectionViewCell.xib */,
+				4CC5E59C1F25949200E30779 /* HeaderView.h */,
+				4CC5E59D1F25949200E30779 /* HeaderView.m */,
+				4CC5E59F1F2594A200E30779 /* HeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +245,8 @@
 			children = (
 				4C8BA46B1F2487C700DA3F2E /* MBProgressHUD+Utils.h */,
 				4C8BA46C1F2487C700DA3F2E /* MBProgressHUD+Utils.m */,
+				4CC5E5A11F2598AE00E30779 /* UIView+NibLoading.h */,
+				4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */,
+				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
@@ -551,10 +565,12 @@
 				4CF236501F0BBDB2003CAA9E /* StringUtils.m in Sources */,
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
+				4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */,
 				4CF2363B1F00B5E2003CAA9E /* UINavigationBar+Awesome.m in Sources */,
 				4C3DB7F71F13B51B006018C4 /* HomePageCollectionViewCell.m in Sources */,
 				4C3DB8051F14AAB1006018C4 /* CAPSPageMenu.m in Sources */,
 				4CBE570F1F15C9DC00333611 /* NativeStub+Navigation.m in Sources */,
+				4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */,
 				4CF236411F0A2367003CAA9E /* BaseRequest.m in Sources */,
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,

@@ -15,5 +15,6 @@
 #import <MJExtension/MJExtension.h>
 #import <ChameleonFramework/Chameleon.h>
 #import <PureLayout/PureLayout.h>
+#import "UIView+NibLoading.h"
 
 #endif /* PrefixHeader_pch */
