@@ -20,6 +20,9 @@ PODS:
   - KLCPopup (1.0)
   - MJExtension (3.0.13)
   - PureLayout (3.0.2)
+  - RongCloudIM/IMKit (2.8.12):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.12)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -31,6 +34,8 @@ DEPENDENCIES:
   - KLCPopup
   - MJExtension
   - PureLayout
+  - RongCloudIM/IMKit (~> 2.8.3)
+  - RongCloudIM/IMLib (~> 2.8.3)
   - SDWebImage
   - UIDevice-Hardware
 
@@ -40,9 +45,10 @@ SPEC CHECKSUMS:
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  RongCloudIM: 13599772038afa20dc62aff70c620b9305e6ac96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UIDevice-Hardware: 4bb15b9bd9878762ab879ac86185baad17b6c3ff
 
-PODFILE CHECKSUM: 8f50a53f86efa8e7780eb7e928418704bd99a0c9
+PODFILE CHECKSUM: dd42e26629e6213017ec5aa0b5d5d83aa75254a1
 
 COCOAPODS: 1.2.1
