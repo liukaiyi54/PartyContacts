@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "PPGetAddressBook.h"
 
+#import <RongIMKit/RongIMKit.h>
+
+static NSString *const kRongIMAPPKey = @"p5tvi9dspmy94";
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +25,9 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [PPGetAddressBook requestAddressBookAuthorization];
+    
+    [[RCIM sharedRCIM] initWithAppKey:kRongIMAPPKey];
+    
     return YES;
 }
 
