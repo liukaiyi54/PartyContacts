@@ -7,6 +7,8 @@
 //
 
 #import "HomePageViewController.h"
+#import "GroupNoticeViewController.h"
+
 #import "InfinitePageView.h"
 #import "HomePageCollectionViewCell.h"
 #import "WebViewController.h"
@@ -89,9 +91,14 @@ static CGFloat const kTabHeight = 50.0f;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    WebViewController *vc = [[WebViewController alloc] init];
-    vc.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 5) {
+        GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+//    WebViewController *vc = [[WebViewController alloc] init];
+//    vc.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - private

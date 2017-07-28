@@ -29,6 +29,10 @@
 		4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570B1F15BE1B00333611 /* NativeStub.m */; };
 		4CBE570F1F15C9DC00333611 /* NativeStub+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */; };
 		4CBE57121F16011E00333611 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE57111F16011E00333611 /* WebViewController.m */; };
+		4CC0F6251F2AD2D300CF78DA /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6241F2AD2D300CF78DA /* PaymentViewController.m */; };
+		4CC0F6281F2AD2F200CF78DA /* GroupNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6271F2AD2F200CF78DA /* GroupNoticeViewController.m */; };
+		4CC0F62B1F2AD31200CF78DA /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */; };
+		4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */; };
 		4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E59D1F25949200E30779 /* HeaderView.m */; };
 		4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5E59F1F2594A200E30779 /* HeaderView.xib */; };
 		4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */; };
@@ -97,6 +101,14 @@
 		4CBE570E1F15C9DC00333611 /* NativeStub+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NativeStub+Navigation.m"; sourceTree = "<group>"; };
 		4CBE57101F16011E00333611 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4CBE57111F16011E00333611 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4CC0F6231F2AD2D300CF78DA /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		4CC0F6241F2AD2D300CF78DA /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		4CC0F6261F2AD2F200CF78DA /* GroupNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupNoticeViewController.h; sourceTree = "<group>"; };
+		4CC0F6271F2AD2F200CF78DA /* GroupNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupNoticeViewController.m; sourceTree = "<group>"; };
+		4CC0F6291F2AD31200CF78DA /* VoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewController.h; sourceTree = "<group>"; };
+		4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
+		4CC0F62C1F2AD36A00CF78DA /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		4CC5E59C1F25949200E30779 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		4CC5E59D1F25949200E30779 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		4CC5E59F1F2594A200E30779 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -320,6 +332,14 @@
 				4C3DB7FF1F14AA27006018C4 /* LocalContactsViewController.m */,
 				4CBE57101F16011E00333611 /* WebViewController.h */,
 				4CBE57111F16011E00333611 /* WebViewController.m */,
+				4CC0F6231F2AD2D300CF78DA /* PaymentViewController.h */,
+				4CC0F6241F2AD2D300CF78DA /* PaymentViewController.m */,
+				4CC0F6261F2AD2F200CF78DA /* GroupNoticeViewController.h */,
+				4CC0F6271F2AD2F200CF78DA /* GroupNoticeViewController.m */,
+				4CC0F6291F2AD31200CF78DA /* VoteViewController.h */,
+				4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */,
+				4CC0F62C1F2AD36A00CF78DA /* ActivityViewController.h */,
+				4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -551,6 +571,7 @@
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
 				4C3DB80A1F151C50006018C4 /* NativeInjector.m in Sources */,
 				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,
+				4CC0F6281F2AD2F200CF78DA /* GroupNoticeViewController.m in Sources */,
 				4C8BA46D1F2487C700DA3F2E /* MBProgressHUD+Utils.m in Sources */,
 				4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */,
 				4C3DB7E91F136EF0006018C4 /* BannerAPI.m in Sources */,
@@ -575,12 +596,15 @@
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */,
+				4CC0F6251F2AD2D300CF78DA /* PaymentViewController.m in Sources */,
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,
 				4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */,
 				4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
 				4C3DB7FD1F14A9EB006018C4 /* PartyContactsViewController.m in Sources */,
+				4CC0F62B1F2AD31200CF78DA /* VoteViewController.m in Sources */,
 				4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */,
+				4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */,
 				4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);
