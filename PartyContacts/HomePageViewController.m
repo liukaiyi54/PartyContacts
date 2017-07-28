@@ -11,6 +11,7 @@
 #import "MeetingsViewController.h"
 #import "VoteViewController.h"
 #import "ActivityViewController.h"
+#import "PaymentViewController.h"
 
 #import "InfinitePageView.h"
 #import "HomePageCollectionViewCell.h"
@@ -100,6 +101,12 @@ static CGFloat const kTabHeight = 50.0f;
         [self.navigationController pushViewController:vc animated:YES];
     }
     
+    if (indexPath.row == 4) {
+        PaymentViewController *vc = [[PaymentViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
     if (indexPath.row == 5) {
         GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
@@ -117,9 +124,6 @@ static CGFloat const kTabHeight = 50.0f;
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
-//    WebViewController *vc = [[WebViewController alloc] init];
-//    vc.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - private

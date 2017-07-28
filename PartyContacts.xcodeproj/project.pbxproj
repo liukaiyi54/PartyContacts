@@ -36,6 +36,7 @@
 		4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */; };
 		4CC0F6381F2ADF3300CF78DA /* VoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */; };
 		4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */; };
+		4CC0F63B1F2AE52300CF78DA /* PaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */; };
 		4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E59D1F25949200E30779 /* HeaderView.m */; };
 		4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5E59F1F2594A200E30779 /* HeaderView.xib */; };
 		4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */; };
@@ -117,6 +118,7 @@
 		4CC0F6351F2ADF3300CF78DA /* VoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteTableViewCell.h; sourceTree = "<group>"; };
 		4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteTableViewCell.m; sourceTree = "<group>"; };
 		4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
+		4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentView.xib; sourceTree = "<group>"; };
 		4CC5E59C1F25949200E30779 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		4CC5E59D1F25949200E30779 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		4CC5E59F1F2594A200E30779 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				4CC0F6351F2ADF3300CF78DA /* VoteTableViewCell.h */,
 				4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */,
 				4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */,
+				4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
+				4CC0F63B1F2AE52300CF78DA /* PaymentView.xib in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
