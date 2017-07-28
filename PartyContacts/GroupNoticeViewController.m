@@ -45,7 +45,6 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
     return cell;
 }
 
-
 - (void)setupTableView {
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
 }

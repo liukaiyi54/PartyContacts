@@ -33,6 +33,7 @@
 		4CC0F6281F2AD2F200CF78DA /* GroupNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6271F2AD2F200CF78DA /* GroupNoticeViewController.m */; };
 		4CC0F62B1F2AD31200CF78DA /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */; };
 		4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */; };
+		4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */; };
 		4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E59D1F25949200E30779 /* HeaderView.m */; };
 		4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5E59F1F2594A200E30779 /* HeaderView.xib */; };
 		4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */; };
@@ -109,6 +110,8 @@
 		4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
 		4CC0F62C1F2AD36A00CF78DA /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		4CC0F62F1F2AD77F00CF78DA /* MeetingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsViewController.h; sourceTree = "<group>"; };
+		4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsViewController.m; sourceTree = "<group>"; };
 		4CC5E59C1F25949200E30779 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		4CC5E59D1F25949200E30779 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		4CC5E59F1F2594A200E30779 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				4CC0F62A1F2AD31200CF78DA /* VoteViewController.m */,
 				4CC0F62C1F2AD36A00CF78DA /* ActivityViewController.h */,
 				4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */,
+				4CC0F62F1F2AD77F00CF78DA /* MeetingsViewController.h */,
+				4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */,
 				4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */,
 				4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */,
+				4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

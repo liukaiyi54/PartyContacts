@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "GroupNoticeViewController.h"
+#import "MeetingsViewController.h"
 
 #import "InfinitePageView.h"
 #import "HomePageCollectionViewCell.h"
@@ -91,6 +92,11 @@ static CGFloat const kTabHeight = 50.0f;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row <= 2) {
+        MeetingsViewController *vc = [[MeetingsViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
     if (indexPath.row == 5) {
         GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
