@@ -7,6 +7,7 @@
 //
 
 #import "MeetingsViewController.h"
+#import "WebViewController.h"
 
 static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 
@@ -62,6 +63,10 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    WebViewController *webVC = [[WebViewController alloc] init];
+    webVC.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (UITableView *)tableView {

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="VoteTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A投票" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpk-TX-VYV">
+                        <rect key="frame" x="8" y="31.5" width="46" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发起时间：2017/7/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTT-yq-Nvr">
+                        <rect key="frame" x="187.5" y="55.5" width="124.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发起人：叶天宽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpP-N3-vyo">
+                        <rect key="frame" x="187.5" y="8" width="124.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="eTT-yq-Nvr" secondAttribute="bottom" constant="4" id="Hj8-Tp-JlQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eTT-yq-Nvr" secondAttribute="trailing" id="UXl-mG-ZvB"/>
+                    <constraint firstItem="UpP-N3-vyo" firstAttribute="leading" secondItem="eTT-yq-Nvr" secondAttribute="leading" id="Uam-zj-KWC"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Zpk-TX-VYV" secondAttribute="leading" id="Yhh-dg-Xso"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UpP-N3-vyo" secondAttribute="trailing" id="b8j-om-yvd"/>
+                    <constraint firstItem="Zpk-TX-VYV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bb6-6d-Fyd"/>
+                    <constraint firstAttribute="topMargin" secondItem="UpP-N3-vyo" secondAttribute="top" id="lSG-am-2aP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="initiatorLabel" destination="UpP-N3-vyo" id="9jX-sk-eiA"/>
+                <outlet property="timeLabel" destination="eTT-yq-Nvr" id="a1q-eN-BTV"/>
+                <outlet property="voteTitleLabel" destination="Zpk-TX-VYV" id="Ln2-VT-5hF"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="16"/>
+        </tableViewCell>
+    </objects>
+</document>
