@@ -27,7 +27,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.navigationController.navigationBar.barTintColor = [UIColor flatRedColor];
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xDF3031);
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationController.navigationBar.translucent = NO;

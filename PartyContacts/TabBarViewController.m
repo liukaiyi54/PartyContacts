@@ -15,9 +15,9 @@
 @implementation TabBarViewController
 
 + (void)initialize {
-    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor flatRedColor]} forState:UIControlStateSelected];
+    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : UIColorFromRGB(0xDF3031)} forState:UIControlStateSelected];
 
-    [[UITabBar appearance] setTintColor:[UIColor flatRedColor]];
+    [[UITabBar appearance] setTintColor:UIColorFromRGB(0xDF3031)];
 }
 
 - (void)viewDidLoad {

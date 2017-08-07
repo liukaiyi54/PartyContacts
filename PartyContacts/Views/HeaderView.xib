@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.87450980392156863" green="0.18823529411764706" blue="0.19215686274509805" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="RAK-TJ-c5H" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nb6-0b-dgp"/>
                 <constraint firstItem="RAK-TJ-c5H" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QYq-Cw-nwC"/>

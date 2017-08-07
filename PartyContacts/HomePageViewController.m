@@ -47,7 +47,7 @@ static CGFloat const kTabHeight = 50.0f;
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.navigationController.navigationBar.barTintColor = [UIColor flatRedColor];
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xDF3031);
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
