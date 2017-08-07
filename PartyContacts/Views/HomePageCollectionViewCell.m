@@ -32,4 +32,9 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:_photoUrl]];
 }
 
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    self.imageView.image = _image;
+}
+
 @end

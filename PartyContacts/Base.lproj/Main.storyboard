@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--党支部通信录-->
+        <!--首页-->
         <scene sceneID="zLb-3u-BtC">
             <objects>
                 <navigationController id="qkq-o2-fAF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="党支部通信录" image="first" id="LW4-A3-KEN"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="首页图标" selectedImage="首页点击图标" id="LW4-A3-KEN"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qZW-73-jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="1676" y="-155"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarViewController" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
@@ -117,7 +117,7 @@
         <scene sceneID="gqC-bi-cfd">
             <objects>
                 <navigationController id="j6z-xm-hdZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="second" id="cv3-8W-24c"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="我的图标" selectedImage="我的点击图标" id="cv3-8W-24c"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vsz-Q6-ICI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -135,7 +135,7 @@
         <scene sceneID="ndG-3w-DEW">
             <objects>
                 <navigationController id="40L-fC-gQr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="组织" image="first" id="snL-lr-muf"/>
+                    <tabBarItem key="tabBarItem" title="组织" image="组织图标" selectedImage="组织点击图标" id="snL-lr-muf"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aug-hX-glE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -172,7 +172,7 @@
         <scene sceneID="lkG-LA-RHf">
             <objects>
                 <navigationController id="qhX-tH-Ng8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="first" id="LeA-Un-bp8"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="消息图标" selectedImage="消息点击图标" id="LeA-Un-bp8"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3nq-58-TM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -188,7 +188,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="我的图标" width="64" height="64"/>
+        <image name="我的点击图标" width="16" height="16"/>
+        <image name="消息图标" width="16" height="16"/>
+        <image name="消息点击图标" width="16" height="16"/>
+        <image name="组织图标" width="16" height="16"/>
+        <image name="组织点击图标" width="16" height="16"/>
+        <image name="首页图标" width="32" height="32"/>
+        <image name="首页点击图标" width="32" height="32"/>
     </resources>
 </document>

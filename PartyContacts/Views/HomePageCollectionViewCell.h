@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *photoUrl;
+@property (nonatomic, strong) UIImage *image;
 
 @end

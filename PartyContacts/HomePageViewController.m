@@ -91,6 +91,7 @@ static CGFloat const kTabHeight = 50.0f;
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCell forIndexPath:indexPath];
     cell.name = [self names][indexPath.row];
+    cell.image = [UIImage imageNamed:[self images][indexPath.row]];
     return cell;
 }
 
@@ -169,6 +170,10 @@ static CGFloat const kTabHeight = 50.0f;
 
 - (NSArray *)names {
     return @[@"支部党员大会", @"支部委员会", @"党小组会", @"党课", @"党费缴纳", @"群通知", @"投票", @"组织活动"];
+}
+
+- (NSArray *)images {
+    return @[@"支部党员大会图标", @"支部委员会图标", @"党小组会图标", @"党课图标", @"党课缴纳图标", @"群通知图标", @"投票图标", @"组织活动图标"];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
+		4C1A75D61F380A05002C1379 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75D51F380A05002C1379 /* TabBarViewController.m */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -61,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1A75D41F380A05002C1379 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		4C1A75D51F380A05002C1379 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				4CC0F62D1F2AD36A00CF78DA /* ActivityViewController.m */,
 				4CC0F62F1F2AD77F00CF78DA /* MeetingsViewController.h */,
 				4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */,
+				4C1A75D41F380A05002C1379 /* TabBarViewController.h */,
+				4C1A75D51F380A05002C1379 /* TabBarViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -624,6 +629,7 @@
 				4CC0F62B1F2AD31200CF78DA /* VoteViewController.m in Sources */,
 				4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */,
 				4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */,
+				4C1A75D61F380A05002C1379 /* TabBarViewController.m in Sources */,
 				4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */,
 				4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
