@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2EE24B19518F006F14C02A32 /* libPods-PartyContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BAC3AC28E34B9EBE90B00 /* libPods-PartyContacts.a */; };
 		4C1A75D61F380A05002C1379 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75D51F380A05002C1379 /* TabBarViewController.m */; };
+		4C1A75DA1F38B028002C1379 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */; };
+		4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -64,6 +66,9 @@
 /* Begin PBXFileReference section */
 		4C1A75D41F380A05002C1379 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		4C1A75D51F380A05002C1379 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		4C1A75D71F38B028002C1379 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -234,6 +239,9 @@
 				4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */,
 				4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */,
 				4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */,
+				4C1A75D71F38B028002C1379 /* MessageTableViewCell.h */,
+				4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */,
+				4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */,
+				4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */,
 				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */,
@@ -591,6 +600,7 @@
 			files = (
 				4CF236441F0A2394003CAA9E /* ServerAPIResponse.m in Sources */,
 				4CBE57121F16011E00333611 /* WebViewController.m in Sources */,
+				4C1A75DA1F38B028002C1379 /* MessageTableViewCell.m in Sources */,
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
 				4C3DB80A1F151C50006018C4 /* NativeInjector.m in Sources */,
 				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,
