@@ -8,7 +8,9 @@
 
 #import "GroupNoticeViewController.h"
 
-static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
+#import "NoticeViewCell.h"
+
+static NSString *const kNoticeViewCell = @"NoticeViewCell";
 @interface GroupNoticeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,21 +34,28 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 76;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
-    cell.textLabel.text = @"吕伟：11点召开支部信息大会";
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 100, 20, 80, 20)];
-    [button setTitle:@"已读" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [cell addSubview:button];
+    NoticeViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNoticeViewCell];
+    cell.title = @"11点召开支部信息大会";
+    cell.sponser = @"吕伟";
+    cell.date = @"07-21";
+    if (indexPath.row < 3) {
+        cell.showRedDot = YES;
+    } else {
+        cell.showRedDot = NO;
+    }
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 - (void)setupTableView {
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:kNoticeViewCell bundle:nil] forCellReuseIdentifier:kNoticeViewCell];
 }
 
 - (UITableView *)tableView {

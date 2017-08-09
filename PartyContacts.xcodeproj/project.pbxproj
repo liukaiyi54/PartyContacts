@@ -17,6 +17,8 @@
 		4C1A75E61F3B463D002C1379 /* PaymentPaidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75E51F3B463D002C1379 /* PaymentPaidViewController.m */; };
 		4C1A75ED1F3B47E6002C1379 /* PaymentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */; };
 		4C1A75EE1F3B47E6002C1379 /* PaymentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */; };
+		4C1A75F21F3B5491002C1379 /* NoticeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75F01F3B5491002C1379 /* NoticeViewCell.m */; };
+		4C1A75F31F3B5491002C1379 /* NoticeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75F11F3B5491002C1379 /* NoticeViewCell.xib */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -84,6 +86,9 @@
 		4C1A75EA1F3B47E6002C1379 /* PaymentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewCell.h; sourceTree = "<group>"; };
 		4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewCell.m; sourceTree = "<group>"; };
 		4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewCell.xib; sourceTree = "<group>"; };
+		4C1A75EF1F3B5491002C1379 /* NoticeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewCell.h; sourceTree = "<group>"; };
+		4C1A75F01F3B5491002C1379 /* NoticeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewCell.m; sourceTree = "<group>"; };
+		4C1A75F11F3B5491002C1379 /* NoticeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeViewCell.xib; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -261,6 +266,9 @@
 				4C1A75EA1F3B47E6002C1379 /* PaymentViewCell.h */,
 				4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */,
 				4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */,
+				4C1A75EF1F3B5491002C1379 /* NoticeViewCell.h */,
+				4C1A75F01F3B5491002C1379 /* NoticeViewCell.m */,
+				4C1A75F11F3B5491002C1379 /* NoticeViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -561,6 +569,7 @@
 				4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4C1A75EE1F3B47E6002C1379 /* PaymentViewCell.xib in Resources */,
+				4C1A75F31F3B5491002C1379 /* NoticeViewCell.xib in Resources */,
 				4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
@@ -640,6 +649,7 @@
 				4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */,
 				4C1A75DF1F395A8F002C1379 /* MeetingViewCell.m in Sources */,
 				4C3DB8001F14AA27006018C4 /* LocalContactsViewController.m in Sources */,
+				4C1A75F21F3B5491002C1379 /* NoticeViewCell.m in Sources */,
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
 				4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */,
