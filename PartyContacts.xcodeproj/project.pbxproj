@@ -11,6 +11,8 @@
 		4C1A75D61F380A05002C1379 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75D51F380A05002C1379 /* TabBarViewController.m */; };
 		4C1A75DA1F38B028002C1379 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */; };
 		4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */; };
+		4C1A75DF1F395A8F002C1379 /* MeetingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */; };
+		4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -69,6 +71,9 @@
 		4C1A75D71F38B028002C1379 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		4C1A75DC1F395A8F002C1379 /* MeetingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingViewCell.h; sourceTree = "<group>"; };
+		4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingViewCell.m; sourceTree = "<group>"; };
+		4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingViewCell.xib; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -242,6 +247,9 @@
 				4C1A75D71F38B028002C1379 /* MessageTableViewCell.h */,
 				4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */,
 				4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */,
+				4C1A75DC1F395A8F002C1379 /* MeetingViewCell.h */,
+				4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */,
+				4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,6 +543,7 @@
 				4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */,
 				4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */,
 				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
+				4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
 				4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
@@ -612,6 +621,7 @@
 				4CF236531F0BC96B003CAA9E /* URLUtils.m in Sources */,
 				4C3DB7ED1F137100006018C4 /* Banner.m in Sources */,
 				4CF2364C1F0A8325003CAA9E /* URLCacheDAO.m in Sources */,
+				4C1A75DF1F395A8F002C1379 /* MeetingViewCell.m in Sources */,
 				4C3DB8001F14AA27006018C4 /* LocalContactsViewController.m in Sources */,
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,

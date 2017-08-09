@@ -9,7 +9,10 @@
 #import "MeetingsViewController.h"
 #import "WebViewController.h"
 
+#import "MeetingViewCell.h"
+
 static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
+static NSString *const kMeetingViewCell = @"MeetingViewCell";
 
 @interface MeetingsViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,40 +26,42 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+    [self setupTableView];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 4;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [[UIView alloc] init];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 16, 80, 40)];
-    if (section == 0) {
-        label.text = @"2017年7月";
-    }
-    if (section == 1) {
-        label.text = @"2017年5月";
-    }
-    [label sizeToFit];
-    [view addSubview:label];
-    
-    return view;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 94;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld日", indexPath.row+7];
-    cell.detailTextLabel.text = indexPath.row % 2 == 0 ? @"A会议" : @"B会议";
+    MeetingViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMeetingViewCell];
+    if (indexPath.row == 0) {
+        cell.priority = PriorityNormal;
+        cell.title = @"关于选举党员支部大会";
+        cell.sponser = @"吕伟";
+        cell.date = @"2017.7.31";
+        cell.status = @"即将进行";
+        cell.isOutOfDate = NO;
+    } else if (indexPath.row == 1) {
+        cell.title = @"关于选举党员支部大会";
+        cell.sponser = @"吕伟";
+        cell.date = @"2017.7.31";
+        cell.status = @"即将进行";
+        cell.isOutOfDate = NO;
+        cell.priority= PriorityImportant;
+    } else {
+        cell.title = @"关于选举党员支部大会";
+        cell.sponser = @"吕伟";
+        cell.date = @"2017.7.31";
+        cell.status = @"已结束";
+        cell.isOutOfDate = YES;
+        cell.priority = PriorityEmergency;
+    }
     
     return cell;
 }
@@ -70,12 +75,16 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
+- (void)setupTableView {
+    [self.tableView registerNib:[UINib nibWithNibName:kMeetingViewCell bundle:nil] forCellReuseIdentifier:kMeetingViewCell];
+    
+}
+
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     return _tableView;
 }
