@@ -15,6 +15,7 @@ static NSString *const kPaymentViewCell = @"PaymentViewCell";
 @interface PaymentUnpaidViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *payButton;
 
 @end
 
@@ -25,6 +26,7 @@ static NSString *const kPaymentViewCell = @"PaymentViewCell";
     
     [self setupTableView];
     [self.view addSubview:self.tableView];
+    [self.view addSubview: self.payButton];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -63,6 +65,16 @@ static NSString *const kPaymentViewCell = @"PaymentViewCell";
         _tableView.layer.borderColor = UIColorFromRGB(0xd8d8d8).CGColor;
     }
     return _tableView;
+}
+
+- (UIButton *)payButton {
+    if (!_payButton) {
+        _payButton = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-170)/2, SCREEN_HEIGHT-64-40-60, 170, 40)];
+        [_payButton setTitle:@"支付" forState:UIControlStateNormal];
+        [_payButton setBackgroundColor:UIColorFromRGB(0xdf3031)];
+        _payButton.layer.cornerRadius = 20;
+    }
+    return _payButton;
 }
 
 @end
