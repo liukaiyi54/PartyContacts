@@ -13,6 +13,10 @@
 		4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */; };
 		4C1A75DF1F395A8F002C1379 /* MeetingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */; };
 		4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */; };
+		4C1A75E31F3B462C002C1379 /* PaymentUnpaidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75E21F3B462C002C1379 /* PaymentUnpaidViewController.m */; };
+		4C1A75E61F3B463D002C1379 /* PaymentPaidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75E51F3B463D002C1379 /* PaymentPaidViewController.m */; };
+		4C1A75ED1F3B47E6002C1379 /* PaymentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */; };
+		4C1A75EE1F3B47E6002C1379 /* PaymentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -41,7 +45,6 @@
 		4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */; };
 		4CC0F6381F2ADF3300CF78DA /* VoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */; };
 		4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */; };
-		4CC0F63B1F2AE52300CF78DA /* PaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */; };
 		4CC5E59E1F25949200E30779 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E59D1F25949200E30779 /* HeaderView.m */; };
 		4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5E59F1F2594A200E30779 /* HeaderView.xib */; };
 		4CC5E5A31F2598AE00E30779 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5E5A21F2598AE00E30779 /* UIView+NibLoading.m */; };
@@ -74,6 +77,13 @@
 		4C1A75DC1F395A8F002C1379 /* MeetingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingViewCell.h; sourceTree = "<group>"; };
 		4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingViewCell.m; sourceTree = "<group>"; };
 		4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingViewCell.xib; sourceTree = "<group>"; };
+		4C1A75E11F3B462C002C1379 /* PaymentUnpaidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentUnpaidViewController.h; sourceTree = "<group>"; };
+		4C1A75E21F3B462C002C1379 /* PaymentUnpaidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentUnpaidViewController.m; sourceTree = "<group>"; };
+		4C1A75E41F3B463D002C1379 /* PaymentPaidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentPaidViewController.h; sourceTree = "<group>"; };
+		4C1A75E51F3B463D002C1379 /* PaymentPaidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentPaidViewController.m; sourceTree = "<group>"; };
+		4C1A75EA1F3B47E6002C1379 /* PaymentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewCell.h; sourceTree = "<group>"; };
+		4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewCell.m; sourceTree = "<group>"; };
+		4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewCell.xib; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -131,7 +141,6 @@
 		4CC0F6351F2ADF3300CF78DA /* VoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteTableViewCell.h; sourceTree = "<group>"; };
 		4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteTableViewCell.m; sourceTree = "<group>"; };
 		4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteTableViewCell.xib; sourceTree = "<group>"; };
-		4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentView.xib; sourceTree = "<group>"; };
 		4CC5E59C1F25949200E30779 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		4CC5E59D1F25949200E30779 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		4CC5E59F1F2594A200E30779 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -243,13 +252,15 @@
 				4CC0F6351F2ADF3300CF78DA /* VoteTableViewCell.h */,
 				4CC0F6361F2ADF3300CF78DA /* VoteTableViewCell.m */,
 				4CC0F6371F2ADF3300CF78DA /* VoteTableViewCell.xib */,
-				4CC0F63A1F2AE52300CF78DA /* PaymentView.xib */,
 				4C1A75D71F38B028002C1379 /* MessageTableViewCell.h */,
 				4C1A75D81F38B028002C1379 /* MessageTableViewCell.m */,
 				4C1A75D91F38B028002C1379 /* MessageTableViewCell.xib */,
 				4C1A75DC1F395A8F002C1379 /* MeetingViewCell.h */,
 				4C1A75DD1F395A8F002C1379 /* MeetingViewCell.m */,
 				4C1A75DE1F395A8F002C1379 /* MeetingViewCell.xib */,
+				4C1A75EA1F3B47E6002C1379 /* PaymentViewCell.h */,
+				4C1A75EB1F3B47E6002C1379 /* PaymentViewCell.m */,
+				4C1A75EC1F3B47E6002C1379 /* PaymentViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +388,10 @@
 				4CC0F6301F2AD77F00CF78DA /* MeetingsViewController.m */,
 				4C1A75D41F380A05002C1379 /* TabBarViewController.h */,
 				4C1A75D51F380A05002C1379 /* TabBarViewController.m */,
+				4C1A75E11F3B462C002C1379 /* PaymentUnpaidViewController.h */,
+				4C1A75E21F3B462C002C1379 /* PaymentUnpaidViewController.m */,
+				4C1A75E41F3B463D002C1379 /* PaymentPaidViewController.h */,
+				4C1A75E51F3B463D002C1379 /* PaymentPaidViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -545,9 +560,9 @@
 				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
 				4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,
+				4C1A75EE1F3B47E6002C1379 /* PaymentViewCell.xib in Resources */,
 				4CC0F6391F2ADF3300CF78DA /* VoteTableViewCell.xib in Resources */,
 				4CF2361B1F00AB24003CAA9E /* Assets.xcassets in Resources */,
-				4CC0F63B1F2AE52300CF78DA /* PaymentView.xib in Resources */,
 				4CF236191F00AB24003CAA9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +626,9 @@
 				4CBE57121F16011E00333611 /* WebViewController.m in Sources */,
 				4C1A75DA1F38B028002C1379 /* MessageTableViewCell.m in Sources */,
 				4CF2365B1F0D1692003CAA9E /* NSURL+QueryDictionary.m in Sources */,
+				4C1A75E31F3B462C002C1379 /* PaymentUnpaidViewController.m in Sources */,
 				4C3DB80A1F151C50006018C4 /* NativeInjector.m in Sources */,
+				4C1A75ED1F3B47E6002C1379 /* PaymentViewCell.m in Sources */,
 				4C3DB7E31F136D14006018C4 /* HomeService.m in Sources */,
 				4CC0F6281F2AD2F200CF78DA /* GroupNoticeViewController.m in Sources */,
 				4C8BA46D1F2487C700DA3F2E /* MBProgressHUD+Utils.m in Sources */,
@@ -639,6 +656,7 @@
 				4C3DB7DA1F131EAD006018C4 /* DeviceUtils.m in Sources */,
 				4CF236301F00ACA2003CAA9E /* MineViewController.m in Sources */,
 				4C655C3B1F0F2D1400B6CD66 /* ErrorUtils.m in Sources */,
+				4C1A75E61F3B463D002C1379 /* PaymentPaidViewController.m in Sources */,
 				4CC0F6251F2AD2D300CF78DA /* PaymentViewController.m in Sources */,
 				4CC0F6381F2ADF3300CF78DA /* VoteTableViewCell.m in Sources */,
 				4CF2365F1F0D2084003CAA9E /* ServerAPIUtils.m in Sources */,

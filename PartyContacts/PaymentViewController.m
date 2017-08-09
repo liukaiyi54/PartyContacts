@@ -7,11 +7,15 @@
 //
 
 #import "PaymentViewController.h"
+#import "PaymentUnpaidViewController.h"
+#import "PaymentPaidViewController.h"
+#import "CAPSPageMenu.h"
 
 static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 
-@interface PaymentViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface PaymentViewController ()
+
+@property (nonatomic, strong) CAPSPageMenu *pageMenu;
 
 @end
 
@@ -20,25 +24,48 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    self.title = @"党费缴纳";
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xDF3031);
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationController.navigationBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
+    
+    [self setupPageMenu];
 }
 
-#pragma mark - UITableViewDelegea
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+- (void)setupPageMenu {
+    [self.view addSubview:self.pageMenu.view];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"时间";
-        cell.detailTextLabel.text = @"未缴";
-    } else {
-        cell.textLabel.text = @"2017/6";
-        cell.detailTextLabel.text = @"10";
+- (CAPSPageMenu *)pageMenu {
+    if (!_pageMenu) {
+        PaymentUnpaidViewController *partyVC = [[PaymentUnpaidViewController alloc] init];
+        partyVC.title = @"未缴";
+        PaymentPaidViewController *localVC = [[PaymentPaidViewController alloc] init];
+        localVC.title = @"已缴";
+        NSDictionary *parameters = @{CAPSPageMenuOptionMenuItemSeparatorWidth: @(0.5),
+                                     CAPSPageMenuOptionSelectionIndicatorHeight: @(1.5),
+                                     CAPSPageMenuOptionMenuHeight: @(44),
+                                     CAPSPageMenuOptionMenuItemWidthBasedOnTitleTextWidth: @(YES),
+                                     CAPSPageMenuOptionMenuItemFont: [UIFont systemFontOfSize:14],
+                                     CAPSPageMenuOptionScrollMenuBackgroundColor: UIColorFromRGB(0xffffff),
+                                     CAPSPageMenuOptionSelectionIndicatorColor: [UIColor flatRedColor],
+                                     CAPSPageMenuOptionSelectedMenuItemLabelColor: [UIColor flatRedColor],
+                                     CAPSPageMenuOptionUnselectedMenuItemLabelColor: UIColorFromRGB(0x999999),
+                                     CAPSPageMenuOptionMenuItemSeparatorColor: UIColorFromRGB(0xe8e8e8),
+                                     CAPSPageMenuOptionBottomMenuHairlineColor: [UIColor clearColor],
+                                     CAPSPageMenuOptionScrollAnimationDurationOnMenuItemTap: @(250),
+                                     CAPSPageMenuOptionMenuMargin: @(36),
+                                     CAPSPageMenuOptionICDMenuLeftMargin:@(20),
+                                     CAPSPageMenuOptionUseMenuLikeSegmentedControl:@(YES),
+                                     };
+        _pageMenu = [[CAPSPageMenu alloc] initWithViewControllers:@[partyVC, localVC] frame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) options:parameters];
     }
-    return cell;
+    return _pageMenu;
 }
 
 @end
