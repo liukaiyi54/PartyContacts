@@ -20,6 +20,14 @@ static NSString *const kVoteTableViewCell = @"VoteTableViewCell";
 
 @implementation VoteViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

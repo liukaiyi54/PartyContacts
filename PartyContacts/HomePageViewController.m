@@ -37,7 +37,7 @@ static CGFloat const kTabHeight = 50.0f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"党支部通讯录";
+    self.title = @"首页";
     
     [self queryData];
     [self configureCollectionView];
@@ -96,33 +96,44 @@ static CGFloat const kTabHeight = 50.0f;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row <= 3) {
+    if (indexPath.row == 0) {
         MeetingsViewController *vc = [[MeetingsViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
+        vc.title = @"支部党员大会";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 1) {
+        MeetingsViewController *vc = [[MeetingsViewController alloc] init];
+        vc.title = @"支部委员会";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 2) {
+        MeetingsViewController *vc = [[MeetingsViewController alloc] init];
+        vc.title = @"党小组会";
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 3) {
+        MeetingsViewController *vc = [[MeetingsViewController alloc] init];
+        vc.title = @"党课";
         [self.navigationController pushViewController:vc animated:YES];
     }
     
     if (indexPath.row == 4) {
         PaymentViewController *vc = [[PaymentViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     
     if (indexPath.row == 5) {
         GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     
     if (indexPath.row == 6) {
         VoteViewController *vc = [[VoteViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     
     if (indexPath.row == 7) {
         ActivityViewController *vc = [[ActivityViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

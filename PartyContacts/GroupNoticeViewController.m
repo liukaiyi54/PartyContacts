@@ -19,6 +19,14 @@ static NSString *const kNoticeViewCell = @"NoticeViewCell";
 
 @implementation GroupNoticeViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
