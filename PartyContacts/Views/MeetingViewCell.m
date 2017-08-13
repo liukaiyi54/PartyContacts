@@ -25,13 +25,11 @@
     // Initialization code
 }
 
-- (void)setTitle:(NSString *)title {
-    _title = [title copy];
-    self.titleLabel.text = _title;
-}
-
-- (void)setPriority:(MeetingPriority)priority {
-    switch (priority) {
+- (void)setModel:(MeetingCellModel *)model {
+    _model = model;
+    
+    self.titleLabel.text = _model.title;
+    switch (_model.priority) {
         case PriorityNormal:
             self.priorityLabel.text = @"[一般]";
             self.priorityLabel.textColor = UIColorFromRGB(0x151515);
@@ -48,34 +46,22 @@
         default:
             break;
     }
-}
-
-- (void)setSponser:(NSString *)sponser {
-    _sponser = [sponser copy];
-    self.sponserLabel.text = _sponser;
-}
-
-- (void)setDate:(NSString *)date {
-    _date = [date copy];
-    self.dateLabel.text = _date;
-}
-
-- (void)setIsOutOfDate:(BOOL)isOutOfDate {
-    _isOutOfDate = isOutOfDate;
-    if (_isOutOfDate) {
+    self.sponserLabel.text = _model.sponser;
+    self.dateLabel.text = _model.date;
+    if (_model.isOutOfDate) {
         self.outOfDateImageView.hidden = NO;
         self.priorityLabel.textColor = UIColorFromRGB(0x999999);
         self.titleLabel.textColor = UIColorFromRGB(0x999999);
     } else {
         self.outOfDateImageView.hidden = YES;
         self.titleLabel.textColor = UIColorFromRGB(0x151515);
-        self.priorityLabel.textColor = self.priority == PriorityNormal ? UIColorFromRGB(0x151515) : UIColorFromRGB(0xDF3031);
+        self.priorityLabel.textColor = _model.priority == PriorityNormal ? UIColorFromRGB(0x151515) : UIColorFromRGB(0xDF3031);
     }
+    self.statusLabel.text = _model.status;
 }
 
-- (void)setStatus:(NSString *)status {
-    _status = [status copy];
-    self.statusLabel.text = _status;
-}
+@end
+
+@implementation MeetingCellModel
 
 @end

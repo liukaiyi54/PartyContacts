@@ -112,7 +112,7 @@ static CGFloat const kTabHeight = 50.0f;
         [self.navigationController pushViewController:vc animated:YES];
     }
     if (indexPath.row == 3) {
-        MeetingsViewController *vc = [[MeetingsViewController alloc] init];
+        MeetingsViewController *vc = [[MeetingsViewController alloc] initWithData:[self partyCourses]];
         vc.title = @"党课";
         [self.navigationController pushViewController:vc animated:YES];
     }
@@ -185,6 +185,31 @@ static CGFloat const kTabHeight = 50.0f;
 
 - (NSArray *)images {
     return @[@"支部党员大会图标", @"支部委员会图标", @"党小组会图标", @"党课图标", @"党课缴纳图标", @"群通知图标", @"投票图标", @"组织活动图标"];
+}
+
+- (NSArray *)partyCourses {
+    MeetingCellModel *model1 = [[MeetingCellModel alloc] init];
+    model1.title = @"融合通信事业部党支部反腐倡廉教育月";
+    model1.sponser = @"胡文辉";
+    model1.date = @"2017年4月17日";
+    
+    MeetingCellModel *model2 = [[MeetingCellModel alloc] init];
+    model2.title = @"反腐倡廉教育月——网上大学学习";
+    model2.sponser = @"吕炜";
+    model2.date = @"2017年4月28日";
+    
+    MeetingCellModel *model3 = [[MeetingCellModel alloc] init];
+    model3.title = @"央企领导人员违纪违法警示录（一）";
+    model3.sponser = @"吕炜";
+    model3.date = @"2017年7月28日";
+    
+    MeetingCellModel *model4 = [[MeetingCellModel alloc] init];
+    model4.title = @"\"党工团发文\"关于开展党规党纪知识测试";
+    model4.sponser = @"叶天宽";
+    model4.date = @"2017年8月28日";
+    model4.priority = PriorityImportant;
+    
+    return @[model1, model2, model3, model4];
 }
 
 @end

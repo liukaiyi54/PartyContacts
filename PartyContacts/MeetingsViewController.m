@@ -17,6 +17,7 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
 @interface MeetingsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *data;
 
 @end
 
@@ -30,6 +31,15 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
     return self;
 }
 
+- (instancetype)initWithData:(NSArray<MeetingCellModel *> *)data {
+    self = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+        self.data = [data copy];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -39,7 +49,7 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return self.data.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,28 +58,9 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MeetingViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMeetingViewCell];
-    if (indexPath.row == 0) {
-        cell.priority = PriorityNormal;
-        cell.title = @"关于选举党员支部大会";
-        cell.sponser = @"吕伟";
-        cell.date = @"2017.7.31";
-        cell.status = @"即将进行";
-        cell.isOutOfDate = NO;
-    } else if (indexPath.row == 1) {
-        cell.title = @"关于选举党员支部大会";
-        cell.sponser = @"吕伟";
-        cell.date = @"2017.7.31";
-        cell.status = @"即将进行";
-        cell.isOutOfDate = NO;
-        cell.priority= PriorityImportant;
-    } else {
-        cell.title = @"关于选举党员支部大会";
-        cell.sponser = @"吕伟";
-        cell.date = @"2017.7.31";
-        cell.status = @"已结束";
-        cell.isOutOfDate = YES;
-        cell.priority = PriorityEmergency;
-    }
+    
+    MeetingCellModel *model = self.data[indexPath.row];
+    cell.model = model;
     
     return cell;
 }

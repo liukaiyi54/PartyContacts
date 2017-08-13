@@ -14,7 +14,7 @@ typedef enum : NSUInteger {
     PriorityEmergency,
 } MeetingPriority;
 
-@interface MeetingViewCell : UITableViewCell
+@interface MeetingCellModel : NSObject
 
 @property (nonatomic, assign) MeetingPriority priority;
 @property (nonatomic, copy) NSString *title;
@@ -22,5 +22,11 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSString *status;
 @property (nonatomic, assign) BOOL isOutOfDate;
+
+@end
+
+@interface MeetingViewCell : UITableViewCell
+
+@property (nonatomic, strong) MeetingCellModel *model;
 
 @end

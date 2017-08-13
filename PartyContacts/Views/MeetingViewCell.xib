@@ -16,12 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuQ-Zz-QzC">
-                        <rect key="frame" x="68" y="8" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="68" y="8.9999999999999982" width="39.666666666666671" height="19.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -60,7 +60,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[一般]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K2-ay-1qL">
-                        <rect key="frame" x="13.999999999999996" y="8" width="46.666666666666657" height="21"/>
+                        <rect key="frame" x="14" y="8" width="46.666666666666657" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -76,6 +76,7 @@
                     <constraint firstAttribute="topMargin" secondItem="6K2-ay-1qL" secondAttribute="top" id="Ux6-H3-ScM"/>
                     <constraint firstItem="fPA-dI-Sxn" firstAttribute="centerY" secondItem="21G-8x-hM8" secondAttribute="centerY" id="WKJ-pT-4hh"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5m7-GL-qJC" secondAttribute="trailing" id="Xov-n0-51N"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iuQ-Zz-QzC" secondAttribute="trailing" priority="750" constant="4" id="Zxf-fT-jPu"/>
                     <constraint firstItem="21G-8x-hM8" firstAttribute="top" secondItem="sPc-xZ-bYh" secondAttribute="bottom" constant="8" id="cBR-5j-ag0"/>
                     <constraint firstItem="5m7-GL-qJC" firstAttribute="leading" secondItem="FTC-PZ-iEe" secondAttribute="trailing" constant="24" id="cHq-Dk-G28"/>
                     <constraint firstItem="sPc-xZ-bYh" firstAttribute="leading" secondItem="6K2-ay-1qL" secondAttribute="leading" id="hPc-op-OXj"/>
