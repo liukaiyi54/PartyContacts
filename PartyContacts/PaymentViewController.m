@@ -65,7 +65,7 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
                                      CAPSPageMenuOptionSelectedMenuItemLabelColor: [UIColor flatRedColor],
                                      CAPSPageMenuOptionUnselectedMenuItemLabelColor: UIColorFromRGB(0x999999),
                                      CAPSPageMenuOptionMenuItemSeparatorColor: UIColorFromRGB(0xe8e8e8),
-                                     CAPSPageMenuOptionBottomMenuHairlineColor: [UIColor clearColor],
+                                     CAPSPageMenuOptionBottomMenuHairlineColor: UIColorFromRGB(0x999999),
                                      CAPSPageMenuOptionScrollAnimationDurationOnMenuItemTap: @(250),
                                      CAPSPageMenuOptionMenuMargin: @(36),
                                      CAPSPageMenuOptionICDMenuLeftMargin:@(20),

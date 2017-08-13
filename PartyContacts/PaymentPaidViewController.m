@@ -39,8 +39,8 @@ static NSString *const kPaymentViewCell = @"PaymentViewCell";
         cell.sum = @"金额";
         cell.showSelectButton = NO;
     } else {
-        cell.date = @"2017.7.18";
-        cell.sum = @"10元";
+        cell.date = [NSString stringWithFormat:@"2017年%ld月", indexPath.row+1];
+        cell.sum = @"50元";
         cell.showSelectButton = NO;
     }
     return cell;
@@ -52,15 +52,12 @@ static NSString *const kPaymentViewCell = @"PaymentViewCell";
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(20, 40, SCREEN_WIDTH-40, 44*4) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.allowsSelection = NO;
-        _tableView.layer.cornerRadius = 4.0f;
-        _tableView.layer.borderWidth = 1.0f;
-        _tableView.layer.borderColor = UIColorFromRGB(0xd8d8d8).CGColor;
     }
     return _tableView;
 }
