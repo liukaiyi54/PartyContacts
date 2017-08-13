@@ -8,9 +8,9 @@
 
 #import "VoteViewController.h"
 
-#import "VoteTableViewCell.h"
+#import "VoteViewCell.h"
 
-static NSString *const kVoteTableViewCell = @"VoteTableViewCell";
+static NSString *const kVoteViewCell = @"VoteViewCell";
 
 @interface VoteViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,16 +42,16 @@ static NSString *const kVoteTableViewCell = @"VoteTableViewCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 94;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    VoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kVoteTableViewCell];
+    VoteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kVoteViewCell];
     return cell;
 }
 
 - (void)setupTableView {
-    [self.tableView registerNib:[UINib nibWithNibName:kVoteTableViewCell bundle:nil] forCellReuseIdentifier:kVoteTableViewCell];
+    [self.tableView registerNib:[UINib nibWithNibName:kVoteViewCell bundle:nil] forCellReuseIdentifier:kVoteViewCell];
 }
 
 - (UITableView *)tableView {
