@@ -21,6 +21,9 @@
 		4C1A75F31F3B5491002C1379 /* NoticeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75F11F3B5491002C1379 /* NoticeViewCell.xib */; };
 		4C1A75F71F3C3CD5002C1379 /* VoteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75F51F3C3CD5002C1379 /* VoteViewCell.m */; };
 		4C1A75F81F3C3CD5002C1379 /* VoteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75F61F3C3CD5002C1379 /* VoteViewCell.xib */; };
+		4C1A75FB1F400F56002C1379 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75FA1F400F56002C1379 /* test1.html */; };
+		4C1A75FD1F40109F002C1379 /* marked.js in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75FC1F40109F002C1379 /* marked.js */; };
+		4C1A75FF1F401490002C1379 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75FE1F401490002C1379 /* main.css */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -92,6 +95,9 @@
 		4C1A75F41F3C3CD5002C1379 /* VoteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewCell.h; sourceTree = "<group>"; };
 		4C1A75F51F3C3CD5002C1379 /* VoteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewCell.m; sourceTree = "<group>"; };
 		4C1A75F61F3C3CD5002C1379 /* VoteViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteViewCell.xib; sourceTree = "<group>"; };
+		4C1A75FA1F400F56002C1379 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
+		4C1A75FC1F40109F002C1379 /* marked.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = marked.js; sourceTree = "<group>"; };
+		4C1A75FE1F401490002C1379 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -356,6 +362,9 @@
 		4CF2360B1F00AB24003CAA9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A75FE1F401490002C1379 /* main.css */,
+				4C1A75FC1F40109F002C1379 /* marked.js */,
+				4C1A75FA1F400F56002C1379 /* test1.html */,
 				4CF2360E1F00AB24003CAA9E /* AppDelegate.h */,
 				4CF2360F1F00AB24003CAA9E /* AppDelegate.m */,
 				4CF2361A1F00AB24003CAA9E /* Assets.xcassets */,
@@ -565,8 +574,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1A75FD1F40109F002C1379 /* marked.js in Resources */,
 				4C3DB7F81F13B51B006018C4 /* HomePageCollectionViewCell.xib in Resources */,
+				4C1A75FF1F401490002C1379 /* main.css in Resources */,
 				4C1A75DB1F38B028002C1379 /* MessageTableViewCell.xib in Resources */,
+				4C1A75FB1F400F56002C1379 /* test1.html in Resources */,
 				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
 				4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */,
 				4CF2361E1F00AB24003CAA9E /* LaunchScreen.storyboard in Resources */,

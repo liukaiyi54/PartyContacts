@@ -70,7 +70,7 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
     
     WebViewController *webVC = [[WebViewController alloc] init];
 //    webVC.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
-    webVC.url = [NSURL URLWithString:@"http://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"];
+    webVC.url = [NSURL URLWithString:@"https://github.com/liukaiyi54/CheckList/blob/master/README.md"];
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

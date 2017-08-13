@@ -1,0 +1,383 @@
+/**
+ * MarkDown
+ */
+/* reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, summary {
+    display: block;
+}
+
+body, input, textarea, select, button {
+    outline: none;
+    -webkit-text-size-adjust: none;
+}
+
+input, textarea, select, button {
+    font-size: inherit;
+    /*form control 's default font in webkit is "-webkit-small-control" -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    remove widget tap highlighted in mobile safari*/
+}
+
+input, textarea, fieldset, img {
+    border: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: inherit;
+}
+
+textarea {
+    overflow: auto;
+}
+
+:focus {
+    outline: none;
+}
+
+input[type=radio]::-ms-check, input[type=checkbox]::-ms-check {
+    display: none;
+    /*去掉IE10 & 11 的默认样式*/
+}
+
+select::-ms-expand {
+    display: none;
+    /*去掉IE10 & 11 的默认样式*/
+}
+
+/* custom */
+body {
+    font-family: PingFang, Arial, Helvetica, sans-serif;
+}
+
+.ios-article {
+    padding: 40px 24px 0;
+}
+
+.ios-wiki {
+    padding: 40px 20px 0;
+}
+
+.android-article {
+    padding: 0 24px;
+}
+
+.android-wiki {
+    padding: 48px 24px 32px;
+}
+
+.ios-report, .android-report {
+    padding: 0 24px 32px;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    text-align: justify;
+    padding-bottom: 28px;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+}
+
+.content h1 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.content h1 + h2 {
+}
+
+.content h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.content p + h2 {
+    padding-top: 2px;
+}
+
+.content h3 {
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 20px;
+}
+
+.content h4 {
+    font-size: 18px
+}
+
+.content h5,
+.content h6 {
+    font-size: 17px
+}
+
+.content img {
+    max-width: 100%
+}
+
+.content hr {
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 25px;
+}
+
+.content a {
+    color: #5e9bc2;
+}
+
+/* 引用的样式 */
+.content blockquote {
+    margin: 0 0 26px 0;
+    padding: 16px;
+    font-weight: 100;
+    font-size: 15px;
+    color: #a78083;
+    word-break: break-all;
+    border-left: 2px solid #a78083;
+    background-color: rgba(167, 128, 131, 0.08);
+}
+
+.content blockquote p:last-child {
+    margin-bottom: 0
+}
+
+/* 列表的样式 */
+.content ul,
+.content ol,
+.content li {
+    list-style: disc outside none;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 25px 25px;
+}
+
+ol li,
+ul li {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+ol li ol,
+ul li ul {
+    margin-top: 15px
+}
+
+/*代码块和inline代码的样式*/
+.content pre {
+    padding: 10px 10px 8px;
+    margin-bottom: 25px;
+    overflow: auto;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: pre;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.content pre code {
+    padding: 0;
+    background-color: transparent;
+    white-space: pre;
+}
+
+.content code {
+    padding: 2px 4px;
+    color: #a78083;
+    border: none;
+    white-space: pre-wrap;
+    background-color: rgba(167, 128, 131, 0.08);
+    font-size: 16px;
+}
+
+/* 表单的样式 */
+.content table {
+    margin-bottom: 25px;
+    border: 1px solid #d9d9d9;
+    border-collapse: collapse;
+    border-left: none;
+}
+
+.content table thead th {
+    vertical-align: bottom
+}
+
+.content table th {
+    font-weight: bold
+}
+
+.content table th,
+.content table td {
+    padding: 8px;
+    border-left: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    line-height: 1.5em;
+    vertical-align: top;
+}
+
+/*文章图片注释样式*/
+.image-package {
+    margin: 0 auto 26px;
+    line-height: 1;
+    text-align: center;
+}
+
+.image-package .image-caption {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 0 0;
+    font-size: 11px;
+    font-weight: normal;
+    color: #999;
+    line-height: 100%;
+}
+
+.image-package .image-caption:empty {
+    display: none;
+}
+
+/* 内容部分*/
+.content {
+    font-size: 17px;
+    line-height: 1.5em;
+    font-weight: 100;
+    color: #555;
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none
+}
+
+.content img {
+    max-width: 100%
+}
+
+.content p {
+    text-align: justify;
+    font-weight: normal;
+    margin: 0 0 26px 0;
+    word-break: break-all;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.content .author-copyright p {
+    font-size: 12px;
+    color: #999999;
+}
+
+input::-webkit-input-placeholder {
+    color: #b1b1b1
+}
+
+.content .hr-wrap {
+    padding: 6px 0 34px;
+}
+
+.content .hr {
+    width: 100%;
+    height: 4px;
+    opacity: 0.2;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAAU2CAQAAABg3vuNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgBg0OGjbSs94XAAAdb0lEQVR42u3OoQ0DQBDEwO+/6QSHnhZY0ZgN83uf9xszM/+FYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMG8d2mJn56NgOMzNPHNthZuaNYzvMzLxxbIeZmTeO7TAz88axHWZm3ji2w8zMV38Bm2O78yIwNVwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDYtMTNUMTQ6MjY6NTQrMDg6MDBK5TETAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTA2LTEzVDE0OjI2OjU0KzA4OjAwO7iJrwAAAABJRU5ErkJggg==);
+}
+
+.content sup {
+    font-size: 8px;
+    color: #a78083;
+    font-weight: bold;
+}
+
+.content sup a {
+    color: #a78083;
+}
+
+/* Responsive css
+For phone and tablet devices */
+@media (max-width: 480px) {
+    /* 内容部分*/
+    .content {
+        position: relative;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .content img {
+        width: auto
+    }
+}
+
+#reload-btn {
+    display: block;
+    width: 80%;
+    margin: 100px auto 0;
+    font-size: 14px;
+    color: steelblue;
+}
+
+.video {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 26px;
+}
+
+.video .button {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin: -24px -24px 0 0;
+    height: 48px;
+    width: 48px;
+    background-size: contain;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAjVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8DizOFAAAALnRSTlMA+vYF3Fi9EgJ4DBcqOZy5LyLpdVx8sAjgH8my8NiGlW4b0ycOoEzMqXBikE9DFFvBRQAAA3VJREFUaN6s1tlO20AAheEzM95jO3birGShSYBA2//9H68qVBRE8P5dWh79Gp8bq6VL+jjPp94MZt40nz+mF41nUy25YVltNFxUHA1gn/LYz85hIheWRebH+ZMFzLGINMQkNmCCeeb0hcvmgQETT9RXOgVzVyX6VlLdGZim6iPdwjqeNF9yDdvuieQKJ9+pBeef4Jp0m7aCtR+1ft334CXqsK2HXazUwWph8Vqv/QuCUh2VAfxSG+4B+6weni0PTo0ue7xCvRQe+8atf+yYhuopnDJrOFwacqfeXM5uoxolHDTIAcqa72NYaKAF5oe+kcw4aLADu0Q3uT1HjeDI3umWK4HTCKKAq26o8EKNIvR4uTEwttBICsuXoSOPe43mHi/68ijQiAKe9UmILTWi0vJ50CWxRhWz1Acp3kqjWnmk+m+Lr5H5bPXuzCnSyKIT6YfNK9WbTM06XnW8QvB+mrVTvSvAPlUHbs1EbxbEarADwFbqIGahV5E1EzXgn3yl1ibGvi1bcKe2AZ5Ktbak0F8/qdoH2D12mPmov4y5dAjAwamdxBpJ2hCoU4BgonYCNpIq5h0DzDK1Mqd6nSLrGsDEaiNjKQnrOgdgGaqZs0gJT+oRaPcDu+WiDQ+9AtgXNcpJ9Zu4XwAeVmoQ86h7/L4BTmfV85krJ+sdYOerVkaugHP/APx0qnEmkEc4JEBQN0SIpxnJoAAHfS9hJtCwwEw1YHjA/mnW2nYahmHoyWjXkFLKOrWUpZWK0BDj4v//POCFJ4Qdpx47P1CpSexzYz6Q/YuOzC/KPeQ35pAzr2n3DOaa5j207SP70HJGhes9Pyoyht3YQDDs9ON6qETjWrtwNgtkC0e5Muc7SFcmomLp395Ll76KtkwlxLRFQ7wOOyQRLzgXwEHDHBE2Lp38dh9IIb/J9L2tkUTfxQJkQ99wew+FAJFIqEhfKBooJJRMBO4ONJ8ClCIQW6EO18pY3BgLcXsrwd4MQVzfzonnNaRwWttS25ubgue2NYFXY2MWeKHWYwX4lob/MccRpnXs/S7YBhRTZRyxPFiHROYxFx/UjQ1UaEaagyhqdNeqAeroeGUYlrZE75cS9wJ+ISpKiFEWRItHCqqYFrnH6tJKAz+1h6H8q/ZQDkztgUHd88WNvl63eoJQPTHVE0V5JtIviKLyjHn95xMOHcl4kXoKRwAAAABJRU5ErkJggg==);
+}
+
+.video .duration {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 24px;
+    padding: 0 8px;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0 24px 30px;
+}

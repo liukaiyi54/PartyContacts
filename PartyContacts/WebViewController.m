@@ -73,13 +73,18 @@
 
 - (void)loadWebView {
     [self.indicator startAnimating];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [self.webView loadRequest:request];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test1" ofType:@"html"];
+    NSString *oldHtml = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSString *asdf = [[NSBundle mainBundle] bundlePath];
+
+
+    [self.webView loadHTMLString:oldHtml baseURL:[NSURL fileURLWithPath:asdf]];
 }
 
 - (UIWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
         _webView.delegate = self;
     }
     return _webView;
