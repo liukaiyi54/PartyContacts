@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-TJ-c5H">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-TJ-c5H">
                     <rect key="frame" x="127" y="60" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="Zz5-Zf-OVF"/>
@@ -35,4 +35,7 @@
             <point key="canvasLocation" x="-173.5" y="-83"/>
         </view>
     </objects>
+    <resources>
+        <image name="avatar.jpeg" width="128" height="174"/>
+    </resources>
 </document>

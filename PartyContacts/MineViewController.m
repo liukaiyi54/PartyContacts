@@ -79,7 +79,7 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
     if (!_headerView) {
         _headerView = [HeaderView loadInstanceFromNib];
         _headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/1.7);
-        _headerView.photoUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1064702232,2761286487&fm=175&s=D93A66DA74F3B1C00A84870C0300F0D6&w=550&h=447&img.JPEG";
+//        _headerView.photoUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1064702232,2761286487&fm=175&s=D93A66DA74F3B1C00A84870C0300F0D6&w=550&h=447&img.JPEG";
     }
     return _headerView;
 }
@@ -89,7 +89,7 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 }
 
 - (NSArray *)fakes {
-    return @[@"奔波儿灞", @"宇宙第一支部", @"-500年", @"妖族"];
+    return @[@"曾小箭", @"中移互联网有限公司党支部", @"10年", @"汉族"];
 }
 
 @end
