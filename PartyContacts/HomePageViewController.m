@@ -61,16 +61,18 @@ static CGFloat const kTabHeight = 50.0f;
 
 #pragma mark - InfinitePageViewDataSource
 - (NSArray *)pageViews {
-    NSMutableArray *views = [[NSMutableArray alloc] init];
-    if (self.banners.count) {
-        [self.banners enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            Banner *banner = obj;
-            UIImageView *imageView = [[UIImageView alloc] init];
-            [imageView sd_setImageWithURL:[NSURL URLWithString:banner.photoUrl]];
-            [views addObject:imageView];
-        }];
-    }
-    return views;
+//    NSMutableArray *views = [[NSMutableArray alloc] init];
+//    if (self.banners.count) {
+//        [self.banners enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            Banner *banner = obj;
+//            UIImageView *imageView = [[UIImageView alloc] init];
+//            [imageView sd_setImageWithURL:[NSURL URLWithString:banner.photoUrl]];
+//            [views addObject:imageView];
+//        }];
+//    }
+//    return views;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"两学一做图片.png"]];
+    return @[imageView];
 }
 
 #pragma mark - UICollectionViewDelegate & etc
