@@ -68,10 +68,21 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    WebViewController *webVC = [[WebViewController alloc] init];
-//    webVC.url = [NSURL URLWithString:@"http://shuoke.autohome.com.cn/article/552749.html#pvareaid=101730"];
-    webVC.url = [NSURL URLWithString:@"https://github.com/liukaiyi54/CheckList/blob/master/README.md"];
-    [self.navigationController pushViewController:webVC animated:YES];
+    if ([self.title isEqualToString:@"党课"]) {
+        WebViewController *webVC = [[WebViewController alloc] init];
+        NSString *path = nil;
+        if (indexPath.row == 0) {
+            path = [[NSBundle mainBundle] pathForResource:@"article1" ofType:@"html"];
+        } else if (indexPath.row == 1) {
+            path = [[NSBundle mainBundle] pathForResource:@"article2" ofType:@"html"];
+        } else if (indexPath.row == 2) {
+            path = [[NSBundle mainBundle] pathForResource:@"article3" ofType:@"html"];
+        } else if (indexPath.row == 3) {
+            path = [[NSBundle mainBundle] pathForResource:@"article4" ofType:@"html"];
+        }
+        webVC.path = path;
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
 }
 
 - (void)setupTableView {

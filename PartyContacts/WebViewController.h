@@ -11,6 +11,7 @@
 @interface WebViewController : UIViewController
 
 @property (nonatomic, strong) NSURL *url;
+@property (nonatomic, copy) NSString *path;
 @property (nonatomic, assign) BOOL exportNativeStub;
 
 @end
