@@ -8,7 +8,9 @@
 
 #import "ActivityViewController.h"
 
-static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
+#import "VoteViewCell.h"
+
+static NSString *const kVoteViewCell = @"VoteViewCell";
 
 @interface ActivityViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -31,40 +33,31 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
     
     self.title = @"活动";
     [self.view addSubview:self.tableView];
+    [self setupTableView];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [[UIView alloc] init];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 16, 80, 40)];
-    if (section == 0) {
-        label.text = @"2017年7月";
-    }
-    if (section == 1) {
-        label.text = @"2017年5月";
-    }
-    [label sizeToFit];
-    [view addSubview:label];
-    
-    return view;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 94;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld日", indexPath.row+7];
-    cell.detailTextLabel.text = indexPath.row % 2 == 0 ? @"A活动" : @"B活动";
+    VoteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kVoteViewCell];
+    if (indexPath.row == 0) {
+        cell.date = @"2017.5.20";
+        cell.number = @"已有12人报名";
+        cell.sponser = @"吕伟";
+        cell.title = @"2017年5月22日  公司端午户外徒步活动报名";
+    } else {
+        cell.date = @"2017.3.5";
+        cell.number = @"已有15人报名";
+        cell.sponser = @"吕伟";
+        cell.title = @"关于收集\"三八妇女节系列活动名单\"";
+    }
     
     return cell;
 }
@@ -72,11 +65,16 @@ static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    
+}
+
+- (void)setupTableView {
+    [self.tableView registerNib:[UINib nibWithNibName:kVoteViewCell bundle:nil] forCellReuseIdentifier:kVoteViewCell];
 }
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];

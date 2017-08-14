@@ -37,7 +37,7 @@ static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
     if (section == 0) {
         return 3;
     }
-    return 6;
+    return [self contacts].count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,19 +57,19 @@ static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.title = @"书记：胡文辉";
-            cell.detail = @"13422456789";
+            cell.detail = @"13802881801";
         }
         if (indexPath.row == 1) {
             cell.title = @"组织委员：叶天宽";
-            cell.detail = @"13503049811";
+            cell.detail = @"13802882688";
         }
         if (indexPath.row == 2) {
             cell.title = @"宣传委员：杨汉坤";
-            cell.detail = @"13825567663";
+            cell.detail = @"13922201024";
         }
     } else {
-        cell.title = @"曹总";
-        cell.detail = @"13802882135";
+        cell.title = [self contacts].allKeys[indexPath.row];
+        cell.detail = [self contacts].allValues[indexPath.row];
     }
 
     return cell;
@@ -92,6 +92,23 @@ static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (NSDictionary *)contacts {
+    return @{
+             @"杨正铃":@"13802885250",
+             @"王绮媛":@"13802883479",
+             @"黄鹤羽	":@"13902220107",
+             @"贺小红	":@"13802881053",
+             @"曾小箭	":@"13802881757",
+             @"谭嘉妍	":@"13802882927",
+             @"万倩茹	":@"13802882776",
+             @"曹阳":@"13802880581",
+             @"丁小波	":@"13902220461",
+             @"张炜东	":@"13802883460",
+             @"陈德志	":@"13802885221",
+             @"欧伯武	":@"13802885101",
+             @"黄浩":@"13802885391"};
 }
 
 @end
