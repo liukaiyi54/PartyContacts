@@ -7,6 +7,7 @@
 //
 
 #import "ActivityViewController.h"
+#import "WebViewController.h"
 
 #import "VoteViewCell.h"
 
@@ -65,7 +66,15 @@ static NSString *const kVoteViewCell = @"VoteViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    
+    WebViewController *webVC = [[WebViewController alloc] init];
+    NSString *path = nil;
+    if (indexPath.row == 0) {
+        path = [[NSBundle mainBundle] pathForResource:@"article5" ofType:@"html"];
+    } else {
+        path = [[NSBundle mainBundle] pathForResource:@"article6" ofType:@"html"];
+    }
+    webVC.path = path;
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)setupTableView {
