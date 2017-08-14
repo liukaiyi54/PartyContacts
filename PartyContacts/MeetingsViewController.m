@@ -45,6 +45,15 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
     
     [self.view addSubview:self.tableView];
     [self setupTableView];
+    
+    if (self.data.count == 0) {
+        UILabel *label = [[UILabel alloc] init];
+        label.text = @"暂无内容";
+        [label sizeToFit];
+        label.center = CGPointMake(self.view.center.x, self.view.center.y-40);
+        label.textColor = UIColorFromRGB(0x999999);
+        [self.view addSubview:label];
+    }
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -95,6 +104,7 @@ static NSString *const kMeetingViewCell = @"MeetingViewCell";
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     }
     return _tableView;
 }

@@ -20,21 +20,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIC-3f-MEX">
-                        <rect key="frame" x="8" y="19" width="60" height="60"/>
+                        <rect key="frame" x="8" y="29" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="gEZ-5J-dBg"/>
-                            <constraint firstAttribute="width" constant="60" id="tet-x8-f23"/>
+                            <constraint firstAttribute="height" constant="40" id="gEZ-5J-dBg"/>
+                            <constraint firstAttribute="width" constant="40" id="tet-x8-f23"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-pN-UEn">
-                        <rect key="frame" x="76" y="23" width="46.5" height="23"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <rect key="frame" x="56" y="25" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtD-cZ-b77">
-                        <rect key="frame" x="76" y="56" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="56" y="55.5" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -45,7 +45,7 @@
                     <constraint firstItem="jIp-pN-UEn" firstAttribute="leading" secondItem="UIC-3f-MEX" secondAttribute="trailing" constant="8" id="ZEN-rk-rJc"/>
                     <constraint firstItem="CtD-cZ-b77" firstAttribute="top" secondItem="jIp-pN-UEn" secondAttribute="bottom" constant="10" id="hLZ-fW-5vl"/>
                     <constraint firstAttribute="leadingMargin" secondItem="UIC-3f-MEX" secondAttribute="leading" id="ilR-kG-vle"/>
-                    <constraint firstItem="jIp-pN-UEn" firstAttribute="top" secondItem="UIC-3f-MEX" secondAttribute="top" constant="4" id="w6P-fz-XTK"/>
+                    <constraint firstItem="jIp-pN-UEn" firstAttribute="top" secondItem="UIC-3f-MEX" secondAttribute="top" constant="-4" id="w6P-fz-XTK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

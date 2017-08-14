@@ -20,7 +20,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.avatarImageView.layer.cornerRadius = 30.0f;
+    self.avatarImageView.layer.cornerRadius = 20.f;
     self.avatarImageView.clipsToBounds = YES;
 }
 
