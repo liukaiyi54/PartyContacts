@@ -32,6 +32,9 @@
 		4C1A760E1F4069BD002C1379 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A760D1F4069BD002C1379 /* avatar.jpeg */; };
 		4C1A76111F414889002C1379 /* article6.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A760F1F414889002C1379 /* article6.html */; };
 		4C1A76121F414889002C1379 /* article5.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A76101F414889002C1379 /* article5.html */; };
+		4C1A76151F41C9B9002C1379 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76141F41C9B9002C1379 /* DemoViewController.m */; };
+		4C1A76BA1F41E574002C1379 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76B91F41E574002C1379 /* BaseNavigationViewController.m */; };
+		4C1A76BD1F41E671002C1379 /* CallSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76BC1F41E671002C1379 /* CallSelectionViewController.m */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -115,6 +118,12 @@
 		4C1A760D1F4069BD002C1379 /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpeg; sourceTree = "<group>"; };
 		4C1A760F1F414889002C1379 /* article6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = article6.html; sourceTree = "<group>"; };
 		4C1A76101F414889002C1379 /* article5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = article5.html; sourceTree = "<group>"; };
+		4C1A76131F41C9B9002C1379 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		4C1A76141F41C9B9002C1379 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		4C1A76B81F41E574002C1379 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		4C1A76B91F41E574002C1379 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
+		4C1A76BB1F41E671002C1379 /* CallSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallSelectionViewController.h; sourceTree = "<group>"; };
+		4C1A76BC1F41E671002C1379 /* CallSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallSelectionViewController.m; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -437,6 +446,12 @@
 				4C1A75E51F3B463D002C1379 /* PaymentPaidViewController.m */,
 				4C1A76061F405D7B002C1379 /* AnotherMessageViewController.h */,
 				4C1A76071F405D7B002C1379 /* AnotherMessageViewController.m */,
+				4C1A76131F41C9B9002C1379 /* DemoViewController.h */,
+				4C1A76141F41C9B9002C1379 /* DemoViewController.m */,
+				4C1A76B81F41E574002C1379 /* BaseNavigationViewController.h */,
+				4C1A76B91F41E574002C1379 /* BaseNavigationViewController.m */,
+				4C1A76BB1F41E671002C1379 /* CallSelectionViewController.h */,
+				4C1A76BC1F41E671002C1379 /* CallSelectionViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -701,6 +716,7 @@
 				4CF236471F0A78EC003CAA9E /* ServerAPIConstants.m in Sources */,
 				4CF236101F00AB24003CAA9E /* AppDelegate.m in Sources */,
 				4C3DB7E01F1368B3006018C4 /* BaseService.m in Sources */,
+				4C1A76BD1F41E671002C1379 /* CallSelectionViewController.m in Sources */,
 				4CF236501F0BBDB2003CAA9E /* StringUtils.m in Sources */,
 				4CF2360D1F00AB24003CAA9E /* main.m in Sources */,
 				4CF2362D1F00AC7E003CAA9E /* ContactsViewController.m in Sources */,
@@ -721,12 +737,14 @@
 				4C3DB7F21F13A37E006018C4 /* InfinitePageView.m in Sources */,
 				4CBE570C1F15BE1B00333611 /* NativeStub.m in Sources */,
 				4CF2362A1F00AC70003CAA9E /* MessageViewController.m in Sources */,
+				4C1A76151F41C9B9002C1379 /* DemoViewController.m in Sources */,
 				4C3DB7FD1F14A9EB006018C4 /* PartyContactsViewController.m in Sources */,
 				4CC0F62B1F2AD31200CF78DA /* VoteViewController.m in Sources */,
 				4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */,
 				4CC0F62E1F2AD36A00CF78DA /* ActivityViewController.m in Sources */,
 				4C1A75D61F380A05002C1379 /* TabBarViewController.m in Sources */,
 				4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */,
+				4C1A76BA1F41E574002C1379 /* BaseNavigationViewController.m in Sources */,
 				4CC0F6311F2AD77F00CF78DA /* MeetingsViewController.m in Sources */,
 				4CF236271F00AC54003CAA9E /* HomePageViewController.m in Sources */,
 			);

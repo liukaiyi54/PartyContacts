@@ -9,8 +9,11 @@
 
 #import "AnotherMessageViewController.h"
 #import "GroupNoticeViewController.h"
+#import "DemoViewController.h"
 
 #import "MessageTableViewCell.h"
+
+#import <RongIMKit/RongIMKit.h>
 
 static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
 
@@ -113,6 +116,11 @@ static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
         GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        DemoViewController *vc = [[DemoViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
+
 @end

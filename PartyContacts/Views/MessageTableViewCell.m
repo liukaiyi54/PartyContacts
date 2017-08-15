@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UIButton *selectButton;
 
 @end
 
@@ -37,6 +38,15 @@
 - (void)setDetail:(NSString *)detail {
     _detail = [detail copy];
     self.detailLabel.text = _detail;
+}
+
+- (IBAction)didTapSelect:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
+
+- (void)setShowSelectButton:(BOOL)showSelectButton {
+    _showSelectButton = showSelectButton;
+    _selectButton.hidden = !_showSelectButton;
 }
 
 @end

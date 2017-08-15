@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,22 +27,32 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-pN-UEn">
-                        <rect key="frame" x="56" y="25" width="42" height="20.5"/>
+                        <rect key="frame" x="56" y="24.999999999999996" width="42" height="20.666666666666661"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtD-cZ-b77">
-                        <rect key="frame" x="56" y="55.5" width="37.5" height="18"/>
+                        <rect key="frame" x="56.000000000000007" y="55.666666666666671" width="37.666666666666679" height="18.000000000000014"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-Rs-1Vp">
+                        <rect key="frame" x="281" y="38" width="16" height="22"/>
+                        <state key="normal" image="选择框"/>
+                        <state key="selected" image="选中状态"/>
+                        <connections>
+                            <action selector="didTapSelect:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rbN-yF-eew"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="CtD-cZ-b77" firstAttribute="leading" secondItem="UIC-3f-MEX" secondAttribute="trailing" constant="8" id="1OR-kE-Fpv"/>
                     <constraint firstItem="UIC-3f-MEX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KHr-o0-9wP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="olE-Rs-1Vp" secondAttribute="trailing" constant="15" id="SNf-ab-Iq8"/>
                     <constraint firstItem="jIp-pN-UEn" firstAttribute="leading" secondItem="UIC-3f-MEX" secondAttribute="trailing" constant="8" id="ZEN-rk-rJc"/>
+                    <constraint firstItem="olE-Rs-1Vp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fCk-6T-6Ly"/>
                     <constraint firstItem="CtD-cZ-b77" firstAttribute="top" secondItem="jIp-pN-UEn" secondAttribute="bottom" constant="10" id="hLZ-fW-5vl"/>
                     <constraint firstAttribute="leadingMargin" secondItem="UIC-3f-MEX" secondAttribute="leading" id="ilR-kG-vle"/>
                     <constraint firstItem="jIp-pN-UEn" firstAttribute="top" secondItem="UIC-3f-MEX" secondAttribute="top" constant="-4" id="w6P-fz-XTK"/>
@@ -51,9 +61,14 @@
             <connections>
                 <outlet property="avatarImageView" destination="UIC-3f-MEX" id="iJQ-6S-iIT"/>
                 <outlet property="detailLabel" destination="CtD-cZ-b77" id="G06-bL-dz7"/>
+                <outlet property="selectButton" destination="olE-Rs-1Vp" id="BHd-Uh-Iod"/>
                 <outlet property="titleLabel" destination="jIp-pN-UEn" id="Cln-bL-xIc"/>
             </connections>
             <point key="canvasLocation" x="-268" y="70"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="选中状态" width="16" height="16"/>
+        <image name="选择框" width="16" height="16"/>
+    </resources>
 </document>

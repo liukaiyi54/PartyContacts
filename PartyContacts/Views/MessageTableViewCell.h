@@ -13,5 +13,6 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *detail;
+@property (nonatomic, assign) BOOL showSelectButton;
 
 @end

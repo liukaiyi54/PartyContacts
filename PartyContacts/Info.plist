@@ -13,6 +13,10 @@
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>此 App 需要您的同意才能读取媒体资料库</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>此 App 需要您的同意才能使用麦克风</string>
 	<key>CFBundleDisplayName</key>
 	<string>党支部通讯录</string>
 	<key>CFBundleExecutable</key>
