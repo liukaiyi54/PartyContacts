@@ -35,6 +35,7 @@
 		4C1A76151F41C9B9002C1379 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76141F41C9B9002C1379 /* DemoViewController.m */; };
 		4C1A76BA1F41E574002C1379 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76B91F41E574002C1379 /* BaseNavigationViewController.m */; };
 		4C1A76BD1F41E671002C1379 /* CallSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A76BC1F41E671002C1379 /* CallSelectionViewController.m */; };
+		4C1A76BF1F43EA35002C1379 /* 广告图.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A76BE1F43EA35002C1379 /* 广告图.png */; };
 		4C1DF0A01F1DF1AD009BC27F /* PPAddressBookHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */; };
 		4C1DF0A11F1DF1AD009BC27F /* PPGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09C1F1DF1AD009BC27F /* PPGetAddressBook.m */; };
 		4C1DF0A21F1DF1AD009BC27F /* PPPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DF09E1F1DF1AD009BC27F /* PPPersonModel.m */; };
@@ -124,6 +125,7 @@
 		4C1A76B91F41E574002C1379 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		4C1A76BB1F41E671002C1379 /* CallSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallSelectionViewController.h; sourceTree = "<group>"; };
 		4C1A76BC1F41E671002C1379 /* CallSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallSelectionViewController.m; sourceTree = "<group>"; };
+		4C1A76BE1F43EA35002C1379 /* 广告图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "广告图.png"; sourceTree = "<group>"; };
 		4C1DF0991F1DF1AD009BC27F /* PPAddressBookHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAddressBookHandle.h; sourceTree = "<group>"; };
 		4C1DF09A1F1DF1AD009BC27F /* PPAddressBookHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAddressBookHandle.m; sourceTree = "<group>"; };
 		4C1DF09B1F1DF1AD009BC27F /* PPGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGetAddressBook.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		4CF2360B1F00AB24003CAA9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A76BE1F43EA35002C1379 /* 广告图.png */,
 				4C1A760F1F414889002C1379 /* article6.html */,
 				4C1A76101F414889002C1379 /* article5.html */,
 				4C1A760D1F4069BD002C1379 /* avatar.jpeg */,
@@ -624,6 +627,7 @@
 				4C1A76041F4056DB002C1379 /* article4.html in Resources */,
 				4C1A75FB1F400F56002C1379 /* article1.html in Resources */,
 				4CC5E5A01F2594A200E30779 /* HeaderView.xib in Resources */,
+				4C1A76BF1F43EA35002C1379 /* 广告图.png in Resources */,
 				4C1A76121F414889002C1379 /* article5.html in Resources */,
 				4C1A76051F4056DB002C1379 /* article3.html in Resources */,
 				4C1A75E01F395A8F002C1379 /* MeetingViewCell.xib in Resources */,

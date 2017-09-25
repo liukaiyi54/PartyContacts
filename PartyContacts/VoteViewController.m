@@ -34,11 +34,18 @@ static NSString *const kVoteViewCell = @"VoteViewCell";
     self.title = @"投票";
     [self setupTableView];
     [self.view addSubview:self.tableView];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"暂无内容";
+    [label sizeToFit];
+    label.center = CGPointMake(self.view.center.x, self.view.center.y-40);
+    label.textColor = UIColorFromRGB(0x999999);
+    [self.view addSubview:label];
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

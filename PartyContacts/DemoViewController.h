@@ -10,4 +10,6 @@
 
 @interface DemoViewController : RCConversationViewController
 
+@property (nonatomic, assign) NSInteger index;
+
 @end

@@ -112,11 +112,14 @@ static NSString *const kMessageTableViewCell = @"MessageTableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 1) {
+        return;
+    }
     if (indexPath.row == 0) {
         GroupNoticeViewController *vc = [[GroupNoticeViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 2){
         DemoViewController *vc = [[DemoViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];

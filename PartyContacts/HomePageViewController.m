@@ -72,7 +72,8 @@ static CGFloat const kTabHeight = 50.0f;
 //    }
 //    return views;
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"两学一做图片.png"]];
-    return @[imageView];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"广告图.png"]];
+    return @[imageView, imageView2];
 }
 
 #pragma mark - UICollectionViewDelegate & etc
